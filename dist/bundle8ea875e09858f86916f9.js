@@ -21,7 +21,81 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ``, "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, `/* Reset default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and text color for the body */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Add some spacing to the header */
+header {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the h1 in the header */
+header h1 {
+  font-size: 24px;
+}
+
+/* Style the navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Style the genre buttons */
+.genre-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.genre-btn:hover {
+  background-color: #ccc;
+}
+
+/* Style the main movie container */
+.movie-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Style the movie cards */
+.movie-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,iCAAA;AACA;EACI,SAAA;EACA,UAAA;AACJ;;AAEE,qDAAA;AACA;EACE,yBAAA;EACA,WAAA;EACA,8BAAA;AACJ;;AAEE,mCAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AACJ;;AAEE,+BAAA;AACA;EACE,eAAA;AACJ;;AAEE,8BAAA;AACA;EACE,gBAAA;AACJ;;AAEE;EACE,gBAAA;AACJ;;AAEE;EACE,qBAAA;EACA,kBAAA;EACA,eAAA;AACJ;;AAEE,4BAAA;AACA;EACE,iBAAA;EACA,sBAAA;EACA,kBAAA;AACJ;;AAEE;EACE,sBAAA;AACJ;;AAEE,mCAAA;AACA;EACE,gBAAA;EACA,aAAA;EACA,2DAAA;EACA,SAAA;AACJ;;AAEE,0BAAA;AACA;EACE,sBAAA;EACA,kBAAA;EACA,wCAAA;EACA,aAAA;AACJ;;AAEE,qBAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,kBAAA;EACA,eAAA;AACJ","sourcesContent":["/* Reset default browser styles */\r\nbody, h1, h2, h3, h4, h5, h6, p, ul, li {\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n\r\n  /* Set background color and text color for the body */\r\n  body {\r\n    background-color: #f2f2f2;\r\n    color: #333;\r\n    font-family: Arial, sans-serif;\r\n  }\r\n\r\n  /* Add some spacing to the header */\r\n  header {\r\n    padding: 20px;\r\n    background-color: #333;\r\n    color: #fff;\r\n  }\r\n\r\n  /* Style the h1 in the header */\r\n  header h1 {\r\n    font-size: 24px;\r\n  }\r\n\r\n  /* Style the navigation menu */\r\n  nav {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  nav ul {\r\n    list-style: none;\r\n  }\r\n\r\n  nav ul li {\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n    cursor: pointer;\r\n  }\r\n\r\n  /* Style the genre buttons */\r\n  .genre-btn {\r\n    padding: 5px 10px;\r\n    border: 1px solid #ccc;\r\n    border-radius: 3px;\r\n  }\r\n\r\n  .genre-btn:hover {\r\n    background-color: #ccc;\r\n  }\r\n\r\n  /* Style the main movie container */\r\n  .movie-container {\r\n    margin-top: 20px;\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n    gap: 20px;\r\n  }\r\n\r\n  /* Style the movie cards */\r\n  .movie-card {\r\n    background-color: #fff;\r\n    border-radius: 5px;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    padding: 10px;\r\n  }\r\n\r\n  /* Style the footer */\r\n  footer {\r\n    padding: 10px;\r\n    background-color: #333;\r\n    color: #fff;\r\n    text-align: center;\r\n    font-size: 12px;\r\n  }\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -555,4 +629,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle3d8d7516a0e94f94137e.js.map
+//# sourceMappingURL=bundle8ea875e09858f86916f9.js.map

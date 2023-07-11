@@ -1,0 +1,84 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and text color for the body */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Add some spacing to the header */
+header {
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+/* Style the h1 in the header */
+header h1 {
+  font-size: 24px;
+}
+
+/* Style the navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Style the genre buttons */
+.genre-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.genre-btn:hover {
+  background-color: #ccc;
+}
+
+/* Style the main movie container */
+.movie-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Style the movie cards */
+.movie-card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
