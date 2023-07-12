@@ -16,6 +16,7 @@ const createTask = (info) => {
     const likeCount = document.createElement('span');
 
     commentButton.classList.add('comments');
+    commentButton.setAttribute('id', `${score.id}`);
     commentButton.innerHTML = 'Comments';
 
     secondaryDivision.classList.add('interactions');
@@ -51,11 +52,12 @@ const createTask = (info) => {
         if (response.ok) {
           score.likes += 1; // Increment likes value
           likeCount.textContent = score.likes.toString();
-        } else {
-          console.log('Failed to like the item.');
+          return null;
         }
+        const message = 'Failed to like the item.';
+        return message;
       } catch (error) {
-        console.log('Error:', error);
+        return error;
       }
     });
 
