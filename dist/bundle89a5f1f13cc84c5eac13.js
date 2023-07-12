@@ -22,7 +22,16 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, `/* Reset default browser styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, li {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
   margin: 0;
   padding: 0;
 }
@@ -95,7 +104,7 @@ footer {
   color: #fff;
   text-align: center;
   font-size: 12px;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,iCAAA;AACA;EACI,SAAA;EACA,UAAA;AACJ;;AAEE,qDAAA;AACA;EACE,yBAAA;EACA,WAAA;EACA,8BAAA;AACJ;;AAEE,mCAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AACJ;;AAEE,+BAAA;AACA;EACE,eAAA;AACJ;;AAEE,8BAAA;AACA;EACE,gBAAA;AACJ;;AAEE;EACE,gBAAA;AACJ;;AAEE;EACE,qBAAA;EACA,kBAAA;EACA,eAAA;AACJ;;AAEE,4BAAA;AACA;EACE,iBAAA;EACA,sBAAA;EACA,kBAAA;AACJ;;AAEE;EACE,sBAAA;AACJ;;AAEE,mCAAA;AACA;EACE,gBAAA;EACA,aAAA;EACA,2DAAA;EACA,SAAA;AACJ;;AAEE,0BAAA;AACA;EACE,sBAAA;EACA,kBAAA;EACA,wCAAA;EACA,aAAA;AACJ;;AAEE,qBAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,kBAAA;EACA,eAAA;AACJ","sourcesContent":["/* Reset default browser styles */\r\nbody, h1, h2, h3, h4, h5, h6, p, ul, li {\r\n    margin: 0;\r\n    padding: 0;\r\n  }\r\n\r\n  /* Set background color and text color for the body */\r\n  body {\r\n    background-color: #f2f2f2;\r\n    color: #333;\r\n    font-family: Arial, sans-serif;\r\n  }\r\n\r\n  /* Add some spacing to the header */\r\n  header {\r\n    padding: 20px;\r\n    background-color: #333;\r\n    color: #fff;\r\n  }\r\n\r\n  /* Style the h1 in the header */\r\n  header h1 {\r\n    font-size: 24px;\r\n  }\r\n\r\n  /* Style the navigation menu */\r\n  nav {\r\n    margin-top: 10px;\r\n  }\r\n\r\n  nav ul {\r\n    list-style: none;\r\n  }\r\n\r\n  nav ul li {\r\n    display: inline-block;\r\n    margin-right: 10px;\r\n    cursor: pointer;\r\n  }\r\n\r\n  /* Style the genre buttons */\r\n  .genre-btn {\r\n    padding: 5px 10px;\r\n    border: 1px solid #ccc;\r\n    border-radius: 3px;\r\n  }\r\n\r\n  .genre-btn:hover {\r\n    background-color: #ccc;\r\n  }\r\n\r\n  /* Style the main movie container */\r\n  .movie-container {\r\n    margin-top: 20px;\r\n    display: grid;\r\n    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n    gap: 20px;\r\n  }\r\n\r\n  /* Style the movie cards */\r\n  .movie-card {\r\n    background-color: #fff;\r\n    border-radius: 5px;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    padding: 10px;\r\n  }\r\n\r\n  /* Style the footer */\r\n  footer {\r\n    padding: 10px;\r\n    background-color: #333;\r\n    color: #fff;\r\n    text-align: center;\r\n    font-size: 12px;\r\n  }\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,iCAAA;AACA;;;;;;;;;;EAUE,SAAA;EACA,UAAA;AACF;;AAEA,qDAAA;AACA;EACE,yBAAA;EACA,WAAA;EACA,8BAAA;AACF;;AAEA,mCAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;AACF;;AAEA,+BAAA;AACA;EACE,eAAA;AACF;;AAEA,8BAAA;AACA;EACE,gBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,qBAAA;EACA,kBAAA;EACA,eAAA;AACF;;AAEA,4BAAA;AACA;EACE,iBAAA;EACA,sBAAA;EACA,kBAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA,mCAAA;AACA;EACE,gBAAA;EACA,aAAA;EACA,2DAAA;EACA,SAAA;AACF;;AAEA,0BAAA;AACA;EACE,sBAAA;EACA,kBAAA;EACA,wCAAA;EACA,aAAA;AACF;;AAEA,qBAAA;AACA;EACE,aAAA;EACA,sBAAA;EACA,WAAA;EACA,kBAAA;EACA,eAAA;AACF","sourcesContent":["/* Reset default browser styles */\r\nbody,\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6,\r\np,\r\nul,\r\nli {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* Set background color and text color for the body */\r\nbody {\r\n  background-color: #f2f2f2;\r\n  color: #333;\r\n  font-family: Arial, sans-serif;\r\n}\r\n\r\n/* Add some spacing to the header */\r\nheader {\r\n  padding: 20px;\r\n  background-color: #333;\r\n  color: #fff;\r\n}\r\n\r\n/* Style the h1 in the header */\r\nheader h1 {\r\n  font-size: 24px;\r\n}\r\n\r\n/* Style the navigation menu */\r\nnav {\r\n  margin-top: 10px;\r\n}\r\n\r\nnav ul {\r\n  list-style: none;\r\n}\r\n\r\nnav ul li {\r\n  display: inline-block;\r\n  margin-right: 10px;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Style the genre buttons */\r\n.genre-btn {\r\n  padding: 5px 10px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 3px;\r\n}\r\n\r\n.genre-btn:hover {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* Style the main movie container */\r\n.movie-container {\r\n  margin-top: 20px;\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  gap: 20px;\r\n}\r\n\r\n/* Style the movie cards */\r\n.movie-card {\r\n  background-color: #fff;\r\n  border-radius: 5px;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  padding: 10px;\r\n}\r\n\r\n/* Style the footer */\r\nfooter {\r\n  padding: 10px;\r\n  background-color: #333;\r\n  color: #fff;\r\n  text-align: center;\r\n  font-size: 12px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -540,6 +549,75 @@ function styleTagTransform(css, styleElement) {
 }
 module.exports = styleTagTransform;
 
+/***/ }),
+
+/***/ "./src/modules/api.js":
+/*!****************************!*\
+  !*** ./src/modules/api.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _display_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display.js */ "./src/modules/display.js");
+
+
+const apiData = 'https://api.tvmaze.com/shows';
+
+const showMovies= async () => {
+  try {
+    const retrieveData = await fetch(apiData);
+    const retrievedData = await retrieveData.json();
+    (0,_display_js__WEBPACK_IMPORTED_MODULE_0__["default"])(retrievedData);
+    return null;
+  } catch (error) {
+    return error;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showMovies);
+
+/***/ }),
+
+/***/ "./src/modules/display.js":
+/*!********************************!*\
+  !*** ./src/modules/display.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// @ts-nocheck
+const taskContainer = document.querySelector('.movie-container');
+const createTask = (info) => {
+  const actionTask = info;
+  actionTask.forEach((score) => {
+    const mainDivision = document.createElement('div');
+    mainDivision.classList.add('movie-card');
+    const image = document.createElement('img');
+    const heading = document.createElement('h3');
+    const secondaryDivision = document.createElement('div');
+    const commentButton = document.createElement('button');
+    commentButton.classList.add('comments');
+    commentButton.innerHTML = 'Comments';
+    secondaryDivision.classList.add('interactions');
+    heading.classList.add('movie-title');
+    image.src = `${score.image.medium}`;
+    image.alt = `${score.name}`;
+    heading.innerHTML = `${score.name}`;
+    mainDivision.appendChild(image);
+    mainDivision.appendChild(heading);
+    mainDivision.appendChild(secondaryDivision);
+    secondaryDivision.appendChild(commentButton);
+    taskContainer.appendChild(mainDivision);
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (createTask);
+
 /***/ })
 
 /******/ 	});
@@ -623,10 +701,15 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
+/* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ "./src/modules/api.js");
 
 
+
+window.addEventListener('load', ()=>{
+  (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
+})
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundle8ea875e09858f86916f9.js.map
+//# sourceMappingURL=bundle89a5f1f13cc84c5eac13.js.map

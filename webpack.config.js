@@ -18,12 +18,12 @@ module.exports = {
 			test: /\.css$/,
 			use: ['style-loader', 'css-loader', 'sass-loader'],
 		  },
-	
+
 		  {
 			test: /\.js$/,
 			exclude: /node_modules/,
 		  },
-	
+
 		  {
 			test: /\.(png|svg|jpg|jpeg|gif)$/i,
 			type: 'asset/resource',
