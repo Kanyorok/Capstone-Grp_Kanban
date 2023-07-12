@@ -4,9 +4,6 @@ const baseAPI = 'https://api.tvmaze.com/shows';
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appID = 'fvEG8bcfusuKIAC9Au4g';
 
-// const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/movies';
-// const appID = 'fvEG8bcfusuKIAC9Au4g';
-
 const showMovies = async () => {
   try {
     const retrieveData = await fetch(baseAPI);
