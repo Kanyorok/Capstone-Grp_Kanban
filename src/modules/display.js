@@ -7,7 +7,6 @@ const createTask = (info) => {
   actionTask.forEach((score) => {
     const mainDivision = document.createElement('div');
     mainDivision.classList.add('movie-card');
-
     const image = document.createElement('img');
     const heading = document.createElement('h3');
     const secondaryDivision = document.createElement('div');
