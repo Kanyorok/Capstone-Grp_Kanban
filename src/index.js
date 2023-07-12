@@ -9,5 +9,4 @@ window.addEventListener('load', () => {
 
   document.getElementById('popWindow').innerHTML = showPopup();
   shows.addEventListener('click', comments);
-
 });
