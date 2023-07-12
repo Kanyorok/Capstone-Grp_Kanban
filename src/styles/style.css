@@ -1,0 +1,131 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and text color for the body */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Add some spacing to the header */
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 10px rgba(1, 22, 95, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+/* Style the h1 in the header */
+header h1 {
+  font-size: 24px;
+}
+
+/* Style the navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Style the genre buttons */
+.genre-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.genre-btn:hover {
+  background-color: #ccc;
+}
+
+/* Style the main movie container */
+.movie-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* Style the movie cards */
+.movie-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+  /* padding: 1rem 0; */
+  place-items: center;
+}
+
+.movie-card:not(.modal-open) {
+  pointer-events: auto;
+}
+
+.movie-card img {
+  /* width: 94%; */
+  /* height: 55%; */
+  width: 98%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.movie-card .interactions {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  margin-top: 0.5rem;
+}
+
+
+/* .fa-heart:before {
+  content: "\f004";
+} */
+
+/* Style the footer */
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid rgb(5, 136, 9);
+  padding: 10px;
+  background-color: white;
+}
