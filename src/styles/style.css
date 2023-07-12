@@ -84,6 +84,7 @@ nav ul li {
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 6px;
+
   /* padding: 1rem 0; */
   place-items: center;
 }
@@ -94,6 +95,7 @@ nav ul li {
 
 .movie-card img {
   /* width: 94%; */
+
   /* height: 55%; */
   width: 98%;
   height: 80%;

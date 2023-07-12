@@ -11,9 +11,9 @@ const createTask = (info) => {
     const heading = document.createElement('h3');
     const secondaryDivision = document.createElement('div');
     const commentButton = document.createElement('button');
-    const likeButton = document.createElement('button'); // New like button
-    const heartIcon = document.createElement('i'); // Heart-shaped icon
-    const likeCount = document.createElement('span'); // Span to display like count
+    const likeButton = document.createElement('button');
+    const heartIcon = document.createElement('i');
+    const likeCount = document.createElement('span');
 
     commentButton.classList.add('comments');
     commentButton.innerHTML = 'Comments';
@@ -30,14 +30,14 @@ const createTask = (info) => {
     mainDivision.appendChild(secondaryDivision);
     secondaryDivision.appendChild(commentButton);
 
-    likeButton.classList.add('like-button'); // Add 'like-button' class to the like button
-    heartIcon.classList.add('fas', 'fa-heart'); // Add classes for heart icon (Font Awesome)
+    likeButton.classList.add('like-button');
+    heartIcon.classList.add('fas', 'fa-heart');
     likeButton.appendChild(heartIcon);
-    secondaryDivision.appendChild(likeButton); // Append like button to secondaryDivision
+    secondaryDivision.appendChild(likeButton);
 
-    likeCount.classList.add('like-count'); // Add 'like-count' class to the like count span
-    likeCount.innerHTML = score.likes; // Set initial like count
-    secondaryDivision.appendChild(likeCount); // Append like count to secondaryDivision
+    likeCount.classList.add('like-count');
+    likeCount.textContent = score.likes.toString();
+    secondaryDivision.appendChild(likeCount);
 
     likeButton.addEventListener('click', async () => {
       try {
@@ -49,8 +49,8 @@ const createTask = (info) => {
           body: JSON.stringify({ item_id: score.id }),
         });
         if (response.ok) {
-          score.likes++;
-          likeCount.innerHTML = score.likes;
+          score.likes += 1; // Increment likes value
+          likeCount.textContent = score.likes.toString();
         } else {
           console.log('Failed to like the item.');
         }
