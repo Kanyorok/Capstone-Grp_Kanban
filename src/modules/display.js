@@ -1,4 +1,3 @@
-// @ts-nocheck
 const taskContainer = document.querySelector('.movie-container');
 const createTask = (info) => {
   const actionTask = info;
@@ -10,6 +9,7 @@ const createTask = (info) => {
     const secondaryDivision = document.createElement('div');
     const commentButton = document.createElement('button');
     commentButton.classList.add('comments');
+    commentButton.setAttribute('id', `${score.id}`);
     commentButton.innerHTML = 'Comments';
     secondaryDivision.classList.add('interactions');
     heading.classList.add('movie-title');
@@ -23,4 +23,5 @@ const createTask = (info) => {
     taskContainer.appendChild(mainDivision);
   });
 };
+
 export default createTask;

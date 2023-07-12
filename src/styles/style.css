@@ -82,3 +82,57 @@ footer {
   text-align: center;
   font-size: 12px;
 }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  visibility: hidden;
+}
+
+.popup_content {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 24px;
+}
+
+.titleContent {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.titleContent h2 {
+  font-family: 'Crete Round', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 138%;
+  color: #172b4d;
+  margin: 0;
+}
+
+.all_info {
+  margin-top: 24px;
+}
+
+.desktopView {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.bottom_section {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 76px;
+}
