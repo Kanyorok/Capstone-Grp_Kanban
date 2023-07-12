@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-  <body>
-    <header>
-      <h1>Movies</h1>
-      <nav>
-          <div class="main-menu">
-              <ul>
-                  <li id="allMovies">All Movies <span class="counter"></span></li>
-                  <li class="genre-btn" id="drama" data-genre="Drama">Drama</li>
-                  <li class="genre-btn" id="action" data-genre="Action">Action</li>
-                  <li class="genre-btn" id="comedy" data-genre="Comedy">Comedy</li>
-                  <li class="genre-btn" id="romance" data-genre="Romance">Romance</li>
-              </ul>
-          </div>
-      </nav>
+
+<body>
+  <header>
+    <h1>Movies</h1>
+    <nav>
+      <div class="main-menu">
+        <ul>
+          <li id="allMovies">All Movies <span class="counter"></span></li>
+          <li class="genre-btn" id="drama" data-genre="Drama">Drama</li>
+          <li class="genre-btn" id="action" data-genre="Action">Action</li>
+          <li class="genre-btn" id="comedy" data-genre="Comedy">Comedy</li>
+          <li class="genre-btn" id="romance" data-genre="Romance">Romance</li>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main>
-      <div id="popWindow"></div>
-      <div class="movie-container"></div>
+    <div id="popWindow"></div>
+    <div class="movie-container"></div>
   </main>
 
   <footer>
-      <p>Created by Emmanuel & Robert under CC License &copy; 2023</p>
+    <p>Created by Emmanuel & Robert under CC License &copy; 2023</p>
   </footer>
-  </body>
+</body>
+
 </html>

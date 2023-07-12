@@ -1,6 +1,6 @@
 import './styles/style.css';
 import showMovies from './modules/api.js';
-import { showPopup, comments, closed } from './modules/commentPopup';
+import { showPopup, comments } from './modules/commentPopup.js';
 
 const shows = document.querySelector('.movie-container');
 
@@ -9,5 +9,3 @@ window.addEventListener('load', () => {
   document.getElementById('popWindow').innerHTML = showPopup();
   shows.addEventListener('click', comments);
 });
-
-
