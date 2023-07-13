@@ -7,6 +7,10 @@ shows.addEventListener('click', comments);
 
 window.addEventListener('load', () => {
   showMovies();
+<<<<<<< Updated upstream
 
   document.getElementById('popWindow').innerHTML = showPopup();
 });
+=======
+});
+>>>>>>> Stashed changes
