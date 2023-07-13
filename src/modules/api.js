@@ -1,4 +1,5 @@
 import createTask from './display.js';
+import { comments } from './commentPopup.js';
 
 const baseAPI = 'https://api.tvmaze.com/shows';
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
@@ -20,6 +21,7 @@ const showMovies = async () => {
     });
 
     createTask(moviesWithLikes);
+    comments(moviesWithLikes);
     return retrievedData;
   } catch (error) {
     return error;

@@ -1,8 +1,5 @@
 import closeSvg from '../assets/images/close.svg';
-
 const baseAPI = 'https://api.tvmaze.com/shows';
-const dataResponse = await fetch(baseAPI);
-const retrievedData = await dataResponse.json();
 
 export const showPopup = () => {
   const pop = `<div class="popup">
@@ -21,32 +18,29 @@ export const showPopup = () => {
           <h3>Summary</h3>
           <p id="projectDesc"></p>
           <div class="bottom_section">
-          <h3>Add A Comment</h3>
-          <form action="" method="post" id="form" class="contact_form">
-          <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
-          <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500"
-            required></textarea>
-          <div class="centered_button" id="form-btn-container">
-            <button id="form_btn" type="submit">Comment</button>
-          </div>
-        </form>
+            <h3>Add A Comment</h3>
+            <form action="" method="post" id="form" class="contact_form">
+              <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
+              <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500" required></textarea>
+              <div class="centered_button" id="form-btn-container">
+                <button id="form_btn" type="submit">Comment</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
     </div>
   </div>`;
-
   return pop;
 };
 
-// close popup window
 const closed = () => {
   const popWin = document.querySelector('.popup');
   popWin.style.visibility = 'hidden';
   return null;
 };
 
-export const comments = (e) => {
+export const comments = async (e) => {
   const worksImg = document.getElementById('closeButton');
   worksImg.src = closeSvg;
   if (e && e.target && e.target.classList.contains('comments')) {
@@ -55,6 +49,8 @@ export const comments = (e) => {
     const imageSelect = document.getElementById('popup-img');
     const paragraphSelect = document.getElementById('projectDesc');
     const popWin = document.querySelector('.popup');
+    const response = await fetch(baseAPI);
+    const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
         titleSelect.innerHTML = show.name;
