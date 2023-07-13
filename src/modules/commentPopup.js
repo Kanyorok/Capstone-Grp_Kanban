@@ -1,8 +1,5 @@
 import closeSvg from '../assets/images/close.svg';
-
-const apiData = 'https://api.tvmaze.com/shows';
-const retrieveData = await fetch(apiData);
-const retrievedData = await retrieveData.json();
+import { retrievedData } from './api.js';
 
 export const showPopup = () => {
   const pop = `<div class="popup">
@@ -18,9 +15,18 @@ export const showPopup = () => {
           <img id="popup-img" src="" alt="Portfolio">
         </div>
         <div class ="all_info">
+          <h3>Summary</h3>
           <p id="projectDesc"></p>
           <div class="bottom_section">
-            
+          <h3>Add A Comment</h3>
+          <form action="" method="post" id="form" class="contact_form">
+          <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
+          <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500"
+            required></textarea>
+          <div class="centered_button" id="form-btn-container">
+            <button id="form_btn" type="submit">Comment</button>
+          </div>
+        </form>
           </div>
         </div>
       </div>
