@@ -13,7 +13,10 @@ const createTask = (info) => {
     const commentButton = document.createElement('button');
     const likeButton = document.createElement('button');
     const heartIcon = document.createElement('i');
+    const likeCountContainer = document.createElement('div');
     const likeCount = document.createElement('span');
+    const dislikeButton = document.createElement('button');
+    const dislikeIcon = document.createElement('i');
 
     commentButton.classList.add('comments');
     commentButton.setAttribute('id', `${score.id}`);
@@ -36,9 +39,17 @@ const createTask = (info) => {
     likeButton.appendChild(heartIcon);
     secondaryDivision.appendChild(likeButton);
 
+    likeCountContainer.classList.add('like-count-container');
+    likeCountContainer.innerHTML = 'Likes: ';
     likeCount.classList.add('like-count');
     likeCount.textContent = score.likes.toString();
-    secondaryDivision.appendChild(likeCount);
+    likeCountContainer.appendChild(likeCount);
+    secondaryDivision.appendChild(likeCountContainer);
+
+    dislikeButton.classList.add('dislike-button');
+    dislikeIcon.classList.add('fas', 'fa-thumbs-down');
+    dislikeButton.appendChild(dislikeIcon);
+    likeCountContainer.appendChild(dislikeButton);
 
     likeButton.addEventListener('click', async () => {
       try {
@@ -58,6 +69,13 @@ const createTask = (info) => {
         return message;
       } catch (error) {
         return error;
+      }
+    });
+
+    dislikeButton.addEventListener('click', () => {
+      if (score.likes > 0) {
+        score.likes -= 1; // Decrease likes value by one
+        likeCount.textContent = score.likes.toString();
       }
     });
 

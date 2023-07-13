@@ -116,6 +116,15 @@ nav ul li {
   margin-top: 0.5rem;
 }
 
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.likes-container span {
+  margin-left: 5px;
+}
+
 /* Style the footer */
 footer {
   height: 10vh;
