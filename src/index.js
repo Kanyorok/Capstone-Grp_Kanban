@@ -3,14 +3,12 @@ import showMovies from './modules/api.js';
 import { showPopup, comments } from './modules/commentPopup.js';
 
 const shows = document.querySelector('.movie-container');
+// @ts-ignore
 shows.addEventListener('click', comments);
 
 window.addEventListener('load', () => {
   showMovies();
-<<<<<<< Updated upstream
 
+  // @ts-ignore
   document.getElementById('popWindow').innerHTML = showPopup();
 });
-=======
-});
->>>>>>> Stashed changes
