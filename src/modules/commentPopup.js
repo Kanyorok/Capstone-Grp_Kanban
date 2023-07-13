@@ -1,5 +1,10 @@
 import closeSvg from '../assets/images/close.svg';
+<<<<<<< Updated upstream
 import { retrievedData } from './api.js';
+=======
+
+const baseAPI = 'https://api.tvmaze.com/shows';
+>>>>>>> Stashed changes
 
 export const showPopup = () => {
   const pop = `<div class="popup">
