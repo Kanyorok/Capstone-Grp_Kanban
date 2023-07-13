@@ -1,8 +1,5 @@
 import closeSvg from '../assets/images/close.svg';
-
-const baseAPI = 'https://api.tvmaze.com/shows';
-const dataResponse = await fetch(baseAPI);
-const retrievedData = await dataResponse.json();
+import { retrievedData } from './api.js';
 
 export const showPopup = () => {
   const pop = `<div class="popup">
