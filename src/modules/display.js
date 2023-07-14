@@ -2,6 +2,15 @@ const taskContainer = document.querySelector('.movie-container');
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appID = 'fvEG8bcfusuKIAC9Au4g';
 
+const getDislikeCount = (itemId) => {
+  const dislikeData = localStorage.getItem(`dislike_${itemId}`);
+  return dislikeData ? parseInt(dislikeData, 10) : 0;
+};
+
+const setDislikeCount = (itemId, count) => {
+  localStorage.setItem(`dislike_${itemId}`, count);
+};
+
 const createTask = (info) => {
   const actionTask = info;
   actionTask.forEach((score) => {
@@ -76,8 +85,14 @@ const createTask = (info) => {
       if (score.likes > 0) {
         score.likes -= 1; // Decrease likes value by one
         likeCount.textContent = score.likes.toString();
+        const dislikeCount = getDislikeCount(score.id);
+        setDislikeCount(score.id, dislikeCount + 1);
       }
     });
+
+    const storedDislikeCount = getDislikeCount(score.id);
+    score.likes -= storedDislikeCount; // Subtract stored dislikes from likes
+    likeCount.textContent = score.likes.toString();
 
     // @ts-ignore
     taskContainer.appendChild(mainDivision);
