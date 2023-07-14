@@ -1,44 +1,4 @@
-import showComments from './showComments';
-
 let idVal = 0;
-
-const addComment = async (e) => {
-  e.preventDefault();
-
-  const valUser = document.querySelector('.userName');
-  const valScore = document.querySelector('.movieComment');
-
-  const commentId = e.target.getAttribute('data-id');
-  idVal = commentId;
-  const commentUser = valUser.value;
-  const commentValue = valScore.value;
-
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-  const appID = 'fvEG8bcfusuKIAC9Au4g';
-
-  const endpoint = `/apps/${appID}/comments`;
-
-  try {
-    const response = await fetch(`${baseURL}${endpoint}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ item_id: commentId, username: commentUser, comment: commentValue }),
-    });
-
-    if (response.status === 201) {
-      valUser.value = '';
-      valScore.value = '';
-      console.log('Comment added successfully!');
-      showCommentsVals();
-    } else {
-      console.error('Failed to add comment.');
-    }
-  } catch (error) {
-    console.error('An error occurred:', error);
-  }
-};
 
 const showCommentsVals = async () => {
   try {
@@ -99,9 +59,48 @@ const showCommentsVals = async () => {
       paragraph2.innerHTML = `${comment.comment}`;
 
       commentContainer.appendChild(tableDesign);
-    });
+    }); return null;
   } catch (error) {
-    console.error('An error occurred:', error);
+    return error;
+  }
+};
+
+const addComment = async (e) => {
+  e.preventDefault();
+
+  const valUser = document.querySelector('.userName');
+  const valScore = document.querySelector('.movieComment');
+
+  const commentId = e.target.getAttribute('data-id');
+  idVal = commentId;
+  const commentUser = valUser.value;
+  const commentValue = valScore.value;
+
+  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+  const appID = 'fvEG8bcfusuKIAC9Au4g';
+
+  const endpoint = `/apps/${appID}/comments`;
+
+  try {
+    const response = await fetch(`${baseURL}${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item_id: commentId, username: commentUser, comment: commentValue }),
+    });
+
+    if (response.status === 201) {
+      valUser.value = '';
+      valScore.value = '';
+      showCommentsVals();
+    } else {
+      const err = 'Failed to add comment.';
+      return err;
+    }
+    return null;
+  } catch (error) {
+    return error;
   }
 };
 

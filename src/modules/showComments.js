@@ -3,8 +3,8 @@ const showComments = async (e) => {
     const buttonId = e?.target?.id;
 
     if (!buttonId) {
-      console.error('Invalid event or missing target ID.');
-      return;
+      const button = 'Invalid event or missing target ID.';
+      return button;
     }
 
     const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
@@ -64,9 +64,9 @@ const showComments = async (e) => {
       paragraph2.innerHTML = `${comment.comment}`;
 
       commentContainer.appendChild(tableDesign);
-    });
+    }); return null;
   } catch (error) {
-    console.error('An error occurred:', error);
+    return error;
   }
 };
 
