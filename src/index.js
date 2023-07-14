@@ -1,6 +1,6 @@
 import "./styles/style.css";
 import showMovies from "./modules/api.js";
-import { comments } from "./modules/commentPopup.js";
+import { showPopup, comments } from "./modules/commentPopup.js";
 import {
   createReservationPopup,
   reservations,
