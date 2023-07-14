@@ -1,14 +1,13 @@
-import './styles/style.css';
-import showMovies from './modules/api.js';
-import { showPopup, comments } from './modules/commentPopup.js';
+import "./styles/style.css";
+import showMovies from "./modules/api.js";
+import { showPopup, comments } from "./modules/commentPopup.js";
+import { reservationPopup, reservations } from "./modules/reservationPopup.js";
 
-const shows = document.querySelector('.movie-container');
-// @ts-ignore
-shows.addEventListener('click', comments);
-
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   showMovies();
+  document.addEventListener("click", comments);
+  document.getElementById("popWindow").innerHTML = showPopup();
 
-  // @ts-ignore
-  document.getElementById('popWindow').innerHTML = showPopup();
+  document.addEventListener("click", reservations);
+  document.getElementById("reservationWindow").innerHTML = reservationPopup();
 });
