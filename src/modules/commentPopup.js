@@ -14,17 +14,19 @@ export const showPopup = () => {
       <div class="desktopView">
         <div id="popup_info">
           <img id="popup-img" src="" alt="Portfolio">
+          <h3>Comments(<span class="commentsCounter">4</span>)</h3>
+          <div class="showComments"></div>
         </div>
         <div class ="all_info">
           <h3>Summary</h3>
           <p id="projectDesc"></p>
           <div class="bottom_section">
             <h3>Add A Comment</h3>
-            <form action="" method="post" id="form" class="contact_form">
-              <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
-              <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500" required></textarea>
+            <form action="" id="form" class="contact_form">
+              <input name="FullName" type="text" class="userName" placeholder="Full name" required maxlength="30" />
+              <textarea name="Message" rows="4" cols="50" class="movieComment" placeholder="Your Insights...." maxlength="500" required></textarea>
               <div class="centered_button" id="form-btn-container">
-                <button id="form_btn" type="submit">Comment</button>
+                <button class="form_btn" type="submit">Comment</button>
               </div>
             </form>
           </div>
@@ -47,6 +49,7 @@ export const comments = async (e) => {
     const titleSelect = document.getElementById('headingSection');
     const imageSelect = document.getElementById('popup-img');
     const paragraphSelect = document.getElementById('projectDesc');
+    const submitBtn = document.querySelector('.form_btn');
     const popWin = document.querySelector('.popup');
     const response = await fetch(baseAPI);
     const retrievedData = await response.json();
@@ -54,6 +57,7 @@ export const comments = async (e) => {
       if (show.id === buttonId) {
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
+        submitBtn.setAttribute('data-id', show.id);
         imageSelect.src = show.image.medium;
         popWin.style.visibility = 'visible';
       }
