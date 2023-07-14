@@ -245,3 +245,11 @@ textarea::placeholder {
   width: 131px;
   height: 48px;
 }
+
+.counter {
+  color: #f44336;
+  background: #ffebee;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 7px;
+}
