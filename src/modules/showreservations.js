@@ -1,3 +1,5 @@
+import reservedCounterVal from "./reserveCounter.js";
+
 const renderReservations = async (info) => {
   try {
     const buttonId = info;
@@ -26,7 +28,7 @@ const renderReservations = async (info) => {
           listItem.textContent = `${reservation.username} - ${reservation.date_start} to ${reservation.date_end}`;
           reservationsList.appendChild(listItem);
         });
-        reservationCount.textContent = `(${reservationInfo.length})`;
+        reservedCounterVal(reservationInfo.length);
       } else {
         reservationsList.innerHTML = '<li>No reservations found</li>';
       }

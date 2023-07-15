@@ -94,9 +94,6 @@ nav ul li {
 }
 
 .movie-card img {
-  /* width: 94%; */
-
-  /* height: 55%; */
   width: 98%;
   height: 80%;
   object-fit: cover;
@@ -201,6 +198,12 @@ thead tr {
   position: sticky;
   width: 100%;
   top: 0;
+}
+
+.names_container p {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 table {
