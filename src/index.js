@@ -1,14 +1,23 @@
-import './styles/style.css';
-import { showMovies, fetchItems } from './modules/api.js';
-import { showPopup, comments } from './modules/commentPopup.js';
+import "./styles/style.css";
+import { showMovies, fetchItems } from "./modules/api.js";
+import popupWin from "./modules/pop.js";
+import comments from "./modules/commentPopup.js";
+import reservations from "./modules/reservationPopup.js";
+import countItems from "./modules/addItemsCounter.js";
+import { addComment } from "./modules/addComment.js";
+import showComments from "./modules/showComments.js";
 
-const shows = document.querySelector('.movie-container');
-// @ts-ignore
-shows.addEventListener('click', comments);
-
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   showMovies();
   fetchItems();
-  // @ts-ignore
-  document.getElementById('popWindow').innerHTML = showPopup();
+  document.querySelector(".counter").innerHTML = countItems();
+
+  const popData = document.getElementById("popWindow");
+  popData.appendChild(popupWin());
+  document.addEventListener("click", reservations);
+  document.addEventListener("click", comments);
+  const form = document.querySelector(".form_btn");
+  form.addEventListener("click", addComment);
+  const commentMovie = document.querySelector(".movie-container");
+  commentMovie.addEventListener("click", showComments);
 });
