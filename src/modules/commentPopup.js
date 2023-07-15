@@ -21,17 +21,23 @@ const comments = async (e) => {
     const headValue = document.getElementById('headerSect');
     const tempCard1 = document.querySelector('.start-date');
     const tempCard2 = document.querySelector('.end-date');
+    const tempCard3 = document.querySelector('.movieComment');
+    const tempHead = document.querySelector('.theHeading');
+    const tempBtn = document.querySelector('.reserve_btn');
     const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
         headValue.innerHTML = 'Add A Comment';
+        tempHead.textContent = 'Comments';
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
         submitBtn.setAttribute('data-id', show.id);
-        submitBtn.innerHTML = 'Comment';
+        submitBtn.style.display = 'block';
         imageSelect.src = show.image.medium;
         tempCard1.style.display = 'none';
         tempCard2.style.display = 'none';
+        tempCard3.style.display = 'block';
+        tempBtn.style.display = 'none';
         popWin.style.visibility = 'visible';
       }
     });

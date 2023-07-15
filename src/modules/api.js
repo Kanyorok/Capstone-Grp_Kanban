@@ -22,8 +22,7 @@ export const showMovies = async () => {
     });
 
     createTask(moviesWithLikes);
-
-    return retrievedData;
+    return null;
   } catch (error) {
     return error;
   }

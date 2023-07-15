@@ -6,8 +6,10 @@ import reservations from './modules/reservationPopup.js';
 import countItems from './modules/addItemsCounter.js';
 import { addComment } from './modules/addComment.js';
 import showComments from './modules/showComments.js';
+import reserved from './modules/addReservation.js';
+import renderReservations from './modules/showreservations.js';
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   showMovies();
   fetchItems();
   document.querySelector('.counter').innerHTML = countItems();
@@ -18,6 +20,14 @@ window.addEventListener('load', () => {
   document.addEventListener('click', comments);
   const form = document.querySelector('.form_btn');
   form.addEventListener('click', addComment);
-  const commentMovie = document.querySelector('.movie-container');
-  commentMovie.addEventListener('click', showComments);
+  const reserveButton = document.querySelector('.reserve_btn');
+  reserveButton.addEventListener('click', reserved);
+  document.addEventListener('click', (event) => {
+    const targetId = event.target.id;
+    if (event.target.classList.contains('reservations')) {
+      renderReservations(targetId);
+    } else if (event.target.classList.contains('comments')) {
+      showComments(targetId);
+    }
+  });
 });

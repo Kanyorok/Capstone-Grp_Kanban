@@ -36,7 +36,9 @@ const popupWin = () => {
 
   const span = document.createElement('span');
   span.classList.add('commentsCounter');
-  commentHeading.innerHTML = 'Comment ';
+  const commentTitle = document.createElement('h3');
+  commentTitle.classList.add('theHeading');
+  commentHeading.appendChild(commentTitle);
   commentHeading.appendChild(span);
 
   const popupImg = document.createElement('img');
@@ -110,8 +112,14 @@ const popupWin = () => {
   const formBtn = document.createElement('button');
   formBtn.classList.add('form_btn');
   formBtn.type = 'submit';
-  formBtn.textContent = 'Reserve';
+  formBtn.textContent = 'Comment';
   formBtnContainer.appendChild(formBtn);
+
+  const reserveBtn = document.createElement('button');
+  reserveBtn.classList.add('reserve_btn');
+  reserveBtn.type = 'submit';
+  reserveBtn.textContent = 'Reserve';
+  formBtnContainer.appendChild(reserveBtn);
 
   bottomSection.appendChild(form);
 
