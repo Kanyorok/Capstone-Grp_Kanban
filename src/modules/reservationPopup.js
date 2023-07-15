@@ -53,6 +53,7 @@ export const createReservationPopup = () => {
   bottomSection.classList.add("bottom_section");
 
   const reserveHeading = document.createElement("h3");
+  reserveHeading.setAttribute('id',"headerSect");
   reserveHeading.textContent = "Reserve Now!";
   bottomSection.appendChild(reserveHeading);
 
@@ -115,6 +116,7 @@ export const reservations = async (e) => {
     const headingSection = document.getElementById("headingSection");
     const popupImg = document.getElementById("popup-img");
     const projectDesc = document.getElementById("projectDesc");
+    const headValue = document.getElementById('headerSect');
     const popup = document.querySelector(".popup");
 
     const response = await fetch(baseAPI);
@@ -122,6 +124,7 @@ export const reservations = async (e) => {
 
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
+        headValue.innerHTML= 'Reserve Now!';
         headingSection.innerHTML = show.name;
         projectDesc.innerHTML = show.summary;
         popupImg.src = show.image.medium;

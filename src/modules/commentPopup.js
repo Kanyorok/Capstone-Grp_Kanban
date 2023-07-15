@@ -19,7 +19,7 @@ export const showPopup = () => {
           <h3>Summary</h3>
           <p id="projectDesc"></p>
           <div class="bottom_section">
-            <h3>Add A Comment</h3>
+            <h3 id="headerSect">Add A Comment</h3>
             <form action="" method="post" id="form" class="contact_form">
               <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
               <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500" required></textarea>
@@ -47,11 +47,13 @@ export const comments = async (e) => {
     const titleSelect = document.getElementById('headingSection');
     const imageSelect = document.getElementById('popup-img');
     const paragraphSelect = document.getElementById('projectDesc');
+    const headValue = document.getElementById('headerSect');
     const popWin = document.querySelector('.popup');
     const response = await fetch(baseAPI);
     const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
+        headValue.innerHTML= 'Add A Comment';
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
         imageSelect.src = show.image.medium;
