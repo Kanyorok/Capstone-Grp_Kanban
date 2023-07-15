@@ -14,7 +14,6 @@ export const comments = async (e) => {
     const titleSelect = document.getElementById("headingSection");
     const imageSelect = document.getElementById("popup-img");
     const paragraphSelect = document.getElementById("projectDesc");
-    const headValue = document.getElementById("headerSect");
     const popWin = document.querySelector(".popup");
     const response = await fetch(baseAPI);
     const retrievedData = await response.json();
@@ -23,6 +22,7 @@ export const comments = async (e) => {
         headValue.innerHTML = "Add A Comment";
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
+        submitBtn.setAttribute("data-id", show.id);
         imageSelect.src = show.image.medium;
         popWin.style.visibility = "visible";
       }

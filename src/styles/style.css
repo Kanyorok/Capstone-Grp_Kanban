@@ -192,6 +192,39 @@ footer {
   align-items: center;
 }
 
+th {
+  /* padding: 8px 15px; */
+  background: #abdd93;
+}
+
+thead tr {
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+tbody > tr:nth-child(odd) {
+  background: #e0e0e0;
+}
+
+tbody > tr:nth-child(even) {
+  background: #fff;
+}
+
+.showComments {
+  margin-top: 24px;
+  border: 2px solid #000;
+  height: 100px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 .contact_form {
   display: flex;
   flex-direction: column;
@@ -244,4 +277,12 @@ textarea::placeholder {
   padding: 12px;
   width: 131px;
   height: 48px;
+}
+
+.counter {
+  color: #f44336;
+  background: #ffebee;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 7px;
 }
