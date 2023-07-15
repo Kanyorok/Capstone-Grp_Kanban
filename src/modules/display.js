@@ -20,6 +20,7 @@ const createTask = (info) => {
     const heading = document.createElement('h3');
     const secondaryDivision = document.createElement('div');
     const commentButton = document.createElement('button');
+    const reserveButton = document.createElement('button');
     const likeButton = document.createElement('button');
     const heartIcon = document.createElement('i');
     const likeCountContainer = document.createElement('div');
@@ -30,6 +31,10 @@ const createTask = (info) => {
     commentButton.classList.add('comments');
     commentButton.setAttribute('id', `${score.id}`);
     commentButton.innerHTML = 'Comments';
+
+    reserveButton.classList.add('reservations');
+    reserveButton.setAttribute('id', `${score.id}`);
+    reserveButton.innerHTML = 'Reservations';
 
     secondaryDivision.classList.add('interactions');
     heading.classList.add('movie-title');
@@ -42,6 +47,7 @@ const createTask = (info) => {
     mainDivision.appendChild(heading);
     mainDivision.appendChild(secondaryDivision);
     secondaryDivision.appendChild(commentButton);
+    secondaryDivision.appendChild(reserveButton);
 
     likeButton.classList.add('like-button');
     heartIcon.classList.add('fas', 'fa-heart');
