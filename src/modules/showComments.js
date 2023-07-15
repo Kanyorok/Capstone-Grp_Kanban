@@ -1,3 +1,5 @@
+import totalComments from './commentCounter.js';
+
 const showComments = async (e) => {
   try {
     const buttonId = e?.target?.id;
@@ -18,23 +20,22 @@ const showComments = async (e) => {
 
     const commentContainer = document.querySelector('.showComments');
     commentContainer.innerHTML = '';
-    const counter = document.querySelector('.commentsCounter');
-    counter.innerHTML = commentsData.length > 0 ? commentsData.length : 0;
+    totalComments(commentsData);
 
     const tableDesign = document.createElement('table');
     const tHead = document.createElement('thead');
     const tBody = document.createElement('tbody');
     tableDesign.append(tHead);
 
-    const trow = document.createElement('tr');
-    tHead.appendChild(trow);
+    const tableRow = document.createElement('tr');
+    tHead.appendChild(tableRow);
 
     const tData1 = document.createElement('th');
     const tData2 = document.createElement('th');
     const tData3 = document.createElement('th');
-    trow.appendChild(tData1);
-    trow.appendChild(tData2);
-    trow.appendChild(tData3);
+    tableRow.appendChild(tData1);
+    tableRow.appendChild(tData2);
+    tableRow.appendChild(tData3);
     tData1.innerHTML = 'Date';
     tData2.innerHTML = 'UserName';
     tData3.innerHTML = 'Comments';

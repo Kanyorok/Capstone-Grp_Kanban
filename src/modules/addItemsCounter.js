@@ -17,7 +17,7 @@ const fetchItems = async () => {
     return retrievedData;
   } catch (error) {
     countItems([]);
-    return [];
+    return error;
   }
 };
 

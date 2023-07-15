@@ -2,7 +2,7 @@ import './styles/style.css';
 import showMovies from './modules/api.js';
 import { showPopup, comments } from './modules/commentPopup.js';
 import countItems from './modules/addItemsCounter.js';
-import addComment from './modules/addComment.js';
+import { addComment } from './modules/addComment.js';
 import showComments from './modules/showComments.js';
 
 const shows = document.querySelector('.movie-container');

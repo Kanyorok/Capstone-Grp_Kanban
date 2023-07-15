@@ -1,6 +1,6 @@
 let idVal = 0;
 
-const showCommentsVals = async () => {
+export const showCommentsVals = async () => {
   try {
     const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
     const appID = 'fvEG8bcfusuKIAC9Au4g';
@@ -65,7 +65,7 @@ const showCommentsVals = async () => {
   }
 };
 
-const addComment = async (e) => {
+export const addComment = async (e) => {
   e.preventDefault();
 
   const valUser = document.querySelector('.userName');
@@ -103,5 +103,3 @@ const addComment = async (e) => {
     return error;
   }
 };
-
-export default addComment;
