@@ -1,10 +1,12 @@
+import axios from 'axios';
 import createTask from './display.js';
+import { countItems } from './countingMovies.js';
 
 const baseAPI = 'https://api.tvmaze.com/shows';
 const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
 const appID = 'fvEG8bcfusuKIAC9Au4g';
 
-const showMovies = async () => {
+export const showMovies = async () => {
   try {
     const [dataResponse, likesResponse] = await Promise.all([
       fetch(baseAPI),
@@ -27,5 +29,16 @@ const showMovies = async () => {
   }
 };
 
+export const fetchItems = async () => {
+  try {
+    const response = await axios.get('https://api.tvmaze.com/shows');
+    const retrievedData = response.data;
+    countItems(retrievedData);
+    return retrievedData;
+  } catch (error) {
+    countItems([]);
+    return [];
+  }
+};
+
 export const retrieveData = showMovies;
-export default showMovies;
