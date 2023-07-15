@@ -89,6 +89,20 @@ const popupWin = () => {
   messageTextarea.classList.add('movieComment');
   form.appendChild(messageTextarea);
 
+  const reservationStartDateInput = document.createElement('input');
+  reservationStartDateInput.type = 'text';
+  reservationStartDateInput.classList.add('start-date');
+  reservationStartDateInput.id = 'reservation-start-date';
+  reservationStartDateInput.placeholder = 'Start Date (YYYY-MM-DD)';
+  form.appendChild(reservationStartDateInput);
+
+  const reservationEndDateInput = document.createElement('input');
+  reservationEndDateInput.classList.add('end-date');
+  reservationEndDateInput.type = 'text';
+  reservationEndDateInput.id = 'reservation-end-date';
+  reservationEndDateInput.placeholder = 'End Date (YYYY-MM-DD)';
+  form.appendChild(reservationEndDateInput);
+
   const formBtnContainer = document.createElement('div');
   formBtnContainer.id = 'form-btn-container';
   form.appendChild(formBtnContainer);

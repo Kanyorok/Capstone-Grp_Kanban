@@ -18,7 +18,9 @@ const reservations = async (e) => {
     const headValue = document.getElementById('headerSect');
     const reserveBtn = document.querySelector('.form_btn');
     const popup = document.querySelector('.popup');
-
+    const tempCard1 = document.querySelector('.start-date');
+    const tempCard2 = document.querySelector('.end-date');
+    const tempCard3 = document.querySelector('.movieComment');
     const response = await fetch(baseAPI);
     const retrievedData = await response.json();
 
@@ -29,6 +31,9 @@ const reservations = async (e) => {
         projectDesc.innerHTML = show.summary;
         popupImg.src = show.image.medium;
         reserveBtn.innerHTML = 'Reserve';
+        tempCard1.style.display = 'block';
+        tempCard2.style.display = 'block';
+        tempCard3.style.display = 'none';
         popup.style.visibility = 'visible';
       }
     });
