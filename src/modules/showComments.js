@@ -1,4 +1,4 @@
-import totalComments from "./commentCounter";
+import totalComments from './commentCounter.js';
 
 const showComments = async (e) => {
   try {
