@@ -1,5 +1,5 @@
 import './styles/style.css';
-import showMovies from './modules/api.js';
+import { showMovies, fetchItems } from './modules/api.js';
 import popupWin from './modules/pop.js';
 import comments from './modules/commentPopup.js';
 import reservations from './modules/reservationPopup.js';
@@ -11,6 +11,7 @@ import renderReservations from './modules/showreservations.js';
 
 window.addEventListener('DOMContentLoaded', () => {
   showMovies();
+  fetchItems();
   document.querySelector('.counter').innerHTML = countItems();
 
   const popData = document.getElementById('popWindow');
