@@ -36,7 +36,6 @@ export const fetchItems = async () => {
     countItems(retrievedData);
     return retrievedData;
   } catch (error) {
-    console.error('Error fetching data:', error);
     countItems([]);
     return [];
   }
