@@ -73,6 +73,7 @@ export const addComment = async (e) => {
 
   const commentId = e.target.getAttribute('data-id');
   idVal = commentId;
+
   const commentUser = valUser.value;
   const commentValue = valScore.value;
 

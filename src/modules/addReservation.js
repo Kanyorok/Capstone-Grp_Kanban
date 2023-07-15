@@ -2,9 +2,8 @@ let tempID;
 
 const renderReservations = async () => {
   try {
-    const baseURL =
-      "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi";
-    const appID = "fvEG8bcfusuKIAC9Au4g";
+    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+    const appID = 'fvEG8bcfusuKIAC9Au4g';
     const itemID = tempID;
 
     const endpoint = `/apps/${appID}/reservations?item_id=${itemID}`;
@@ -12,52 +11,51 @@ const renderReservations = async () => {
     const response = await fetch(`${baseURL}${endpoint}`);
     const reservationInfo = await response.json();
 
-    const reservationsList = document.querySelector(".showComments");
-    const reservationCount = document.querySelector(".commentsCounter");
-    reservationsList.innerHTML = "<li>Loading reservations...</li>";
+    const reservationsList = document.querySelector('.showComments');
+    const reservationCount = document.querySelector('.commentsCounter');
+    reservationsList.innerHTML = '<li>Loading reservations...</li>';
     try {
-      reservationsList.innerHTML = "";
+      reservationsList.innerHTML = '';
       if (reservationInfo.length > 0) {
         reservationInfo.forEach((reservation) => {
-          const listItem = document.createElement("li");
+          const listItem = document.createElement('li');
           listItem.textContent = `${reservation.username} - ${reservation.date_start} to ${reservation.date_end}`;
           reservationsList.appendChild(listItem);
         });
         reservationCount.textContent = `(${reservationInfo.length})`;
       } else {
-        reservationsList.innerHTML = "<li>No reservations found</li>";
-        reservationCount.textContent = `(0)`;
+        reservationsList.innerHTML = '<li>No reservations found</li>';
+        reservationCount.textContent = '(0)';
       }
     } catch (error) {
-      reservationsList.innerHTML = "<li>Error loading reservations</li>";
-      reservationCount.textContent = "";
-      console.error("Error loading reservations:", error.message);
+      reservationsList.innerHTML = '<li>Error loading reservations</li>';
+      reservationCount.textContent = '';
     }
+    return null;
   } catch (error) {
-    console.error("Error fetching data:", error.message);
+    return null;
   }
 };
 
-export const reserved = async (e) => {
+const reserved = async (e) => {
   e.preventDefault();
-  const nameInput = document.querySelector(".userName");
-  const startDateInput = document.querySelector(".start-date");
-  const endDateInput = document.querySelector(".end-date");
-  const baseURL =
-    "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi";
-  const appID = "fvEG8bcfusuKIAC9Au4g";
+  const nameInput = document.querySelector('.userName');
+  const startDateInput = document.querySelector('.start-date');
+  const endDateInput = document.querySelector('.end-date');
+  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+  const appID = 'fvEG8bcfusuKIAC9Au4g';
 
   const endpoint = `/apps/${appID}/reservations/`;
-  const rId = e.target.getAttribute("data-id");
+  const rId = e.target.getAttribute('data-id');
   tempID = rId;
   const name = nameInput.value.trim();
   const startDate = startDateInput.value.trim();
   const endDate = endDateInput.value.trim();
-  if (name !== "" && startDate !== "" && endDate !== "") {
+  if (name !== '' && startDate !== '' && endDate !== '') {
     try {
       const response = await fetch(`${baseURL}${endpoint}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           item_id: rId,
           username: name,
@@ -67,19 +65,18 @@ export const reserved = async (e) => {
       });
 
       if (response.status === 201) {
-        nameInput.value = "";
-        startDateInput.value = "";
-        endDateInput.value = "";
+        nameInput.value = '';
+        startDateInput.value = '';
+        endDateInput.value = '';
         renderReservations();
-        console.log("Reservation added successfully");
       }
 
-      //await renderReservations();
+      // await renderReservations();
     } catch (error) {
-      console.error("Error adding reservation:", error.message);
+      return null;
     }
   }
-  console.log(nameInput);
+  return null;
 };
 
-//renderReservations();
+export default reserved;

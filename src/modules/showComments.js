@@ -1,8 +1,8 @@
 import totalComments from './commentCounter.js';
 
-const showComments = async (e) => {
+const showComments = async (info) => {
   try {
-    const buttonId = e?.target?.id;
+    const buttonId = info;
 
     if (!buttonId) {
       const button = 'Invalid event or missing target ID.';
@@ -65,7 +65,8 @@ const showComments = async (e) => {
       paragraph2.innerHTML = `${comment.comment}`;
 
       commentContainer.appendChild(tableDesign);
-    }); return null;
+    });
+    return null;
   } catch (error) {
     return error;
   }

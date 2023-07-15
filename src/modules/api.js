@@ -1,12 +1,8 @@
-import { render } from "sass";
-import createTask from "./display.js";
-import showComments from "./showComments.js";
-import renderReservations from "./showreservations.js";
+import createTask from './display.js';
 
-const baseAPI = "https://api.tvmaze.com/shows";
-const involvementAPI =
-  "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps";
-const appID = "fvEG8bcfusuKIAC9Au4g";
+const baseAPI = 'https://api.tvmaze.com/shows';
+const involvementAPI = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps';
+const appID = 'fvEG8bcfusuKIAC9Au4g';
 
 const showMovies = async () => {
   try {
@@ -23,8 +19,8 @@ const showMovies = async () => {
       return { ...movie, likes: like ? like.likes : 0 };
     });
 
-    const allMovies = document.querySelector(".movie-container");
-    allMovies.append(createTask(moviesWithLikes));
+    createTask(moviesWithLikes);
+    return null;
   } catch (error) {
     return error;
   }
