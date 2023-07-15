@@ -1,4 +1,5 @@
 import totalComments from './commentCounter.js';
+
 const showComments = async (e) => {
   try {
     const buttonId = e?.target?.id;
