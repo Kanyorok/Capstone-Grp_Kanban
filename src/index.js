@@ -6,8 +6,8 @@ import reservations from "./modules/reservationPopup.js";
 import countItems from "./modules/addItemsCounter.js";
 import { addComment } from "./modules/addComment.js";
 import showComments from "./modules/showComments.js";
-//import { reserved } from "./modules/addReservation.js";
-import renderReservations from "./modules/showreservations.js";
+// //import { reserved } from "./modules/addReservation.js";
+// import renderReservations from "./modules/showreservations.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   showMovies();

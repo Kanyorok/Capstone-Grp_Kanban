@@ -25,6 +25,11 @@ const showMovies = async () => {
 
     const allMovies = document.querySelector(".movie-container");
     allMovies.append(createTask(moviesWithLikes));
+
+    const allComments = document.querySelector(".comments");
+    allComments?.addEventListener('click', showComments)
+    const allReservations = document.querySelector(".reservations");
+    allReservations?.addEventListener('click', renderReservations);
   } catch (error) {
     return error;
   }
