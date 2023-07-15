@@ -19,6 +19,8 @@ const comments = async (e) => {
     const response = await fetch(baseAPI);
     const submitBtn = document.querySelector('.form_btn');
     const headValue = document.getElementById('headerSect');
+    const tempCard1 = document.querySelector('.start-date');
+    const tempCard2 = document.querySelector('.end-date');
     const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
@@ -28,6 +30,8 @@ const comments = async (e) => {
         submitBtn.setAttribute('data-id', show.id);
         submitBtn.innerHTML = 'Comment';
         imageSelect.src = show.image.medium;
+        tempCard1.style.display = 'none';
+        tempCard2.style.display = 'none';
         popWin.style.visibility = 'visible';
       }
     });
