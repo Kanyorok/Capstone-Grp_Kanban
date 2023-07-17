@@ -1,14 +1,14 @@
+import { baseURL, appID, endpoint } from './constants.js';
+
 let tempID;
 
 const renderReservations = async () => {
   try {
-    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-    const appID = 'fvEG8bcfusuKIAC9Au4g';
     const itemID = tempID;
 
-    const endpoint = `/apps/${appID}/reservations?item_id=${itemID}`;
+    const reserveData = `/apps/${appID}/reservations?item_id=${itemID}`;
 
-    const response = await fetch(`${baseURL}${endpoint}`);
+    const response = await fetch(`${baseURL}${reserveData}`);
     const reservationInfo = await response.json();
 
     const reservationsList = document.querySelector('.showComments');
@@ -42,10 +42,6 @@ const reserved = async (e) => {
   const nameInput = document.querySelector('.userName');
   const startDateInput = document.querySelector('.start-date');
   const endDateInput = document.querySelector('.end-date');
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-  const appID = 'fvEG8bcfusuKIAC9Au4g';
-
-  const endpoint = `/apps/${appID}/reservations/`;
   const rId = e.target.getAttribute('data-id');
   tempID = rId;
   const name = nameInput.value.trim();
@@ -70,8 +66,6 @@ const reserved = async (e) => {
         endDateInput.value = '';
         renderReservations();
       }
-
-      // await renderReservations();
     } catch (error) {
       return null;
     }

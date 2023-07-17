@@ -117,7 +117,7 @@ You can deploy this project using:
 
 👤 **Author1: Robert Kanyoro**
 
-- GitHub: [@RKanyoro](https://github.com/RKanyoro)
+- GitHub: [@RKanyoro](https://github.com/Kanyorok)
 - Twitter: [@CarlosMbugua](https://twitter.com/CarlosMbugua)
 - LinkedIn: [Robert Mbugua](https://www.linkedin.com/in/robert-mbugua-a8745093/)
 
@@ -169,6 +169,6 @@ I would like to thank @microverse
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE.md) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

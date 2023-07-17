@@ -1,14 +1,14 @@
+import { baseURL, appID, endpoint } from './constants.js';
+
 let idVal = 0;
 
 export const showCommentsVals = async () => {
   try {
-    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-    const appID = 'fvEG8bcfusuKIAC9Au4g';
     const itemID = idVal;
 
-    const endpoint = `/apps/${appID}/comments?item_id=${itemID}`;
+    const getData = `/apps/${appID}/comments?item_id=${itemID}`;
 
-    const response = await fetch(`${baseURL}${endpoint}`);
+    const response = await fetch(`${baseURL}${getData}`);
     const commentsData = await response.json();
 
     const commentContainer = document.querySelector('.showComments');
@@ -76,11 +76,6 @@ export const addComment = async (e) => {
 
   const commentUser = valUser.value;
   const commentValue = valScore.value;
-
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-  const appID = 'fvEG8bcfusuKIAC9Au4g';
-
-  const endpoint = `/apps/${appID}/comments`;
 
   try {
     const response = await fetch(`${baseURL}${endpoint}`, {

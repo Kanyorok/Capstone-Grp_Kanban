@@ -1,4 +1,4 @@
-import reservedCounterVal from "./reserveCounter.js";
+import reservedCounterVal from './reserveCounter.js';
 
 const renderReservations = async (info) => {
   try {

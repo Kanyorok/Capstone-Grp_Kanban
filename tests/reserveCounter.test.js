@@ -1,5 +1,5 @@
 import { JSDOM } from 'jsdom';
-import reservedCounterVal from '../src/modules/reserveCounter';
+import reservedCounterVal from '../src/modules/reserveCounter.js';
 
 describe('cummulatedReservations', () => {
   let dom;
