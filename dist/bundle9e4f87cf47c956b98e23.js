@@ -116,8 +116,6 @@ nav ul li {
 }
 
 .movie-card img {
-  /* width: 94%; */
-  /* height: 55%; */
   width: 98%;
   height: 80%;
   object-fit: cover;
@@ -170,6 +168,7 @@ footer {
   display: flex;
   align-items: center;
   visibility: hidden;
+  height: 100%;
 }
 
 .popup_content {
@@ -200,11 +199,6 @@ footer {
   margin-bottom: 24px;
 }
 
-.desktopView {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .bottom_section {
   display: flex;
   justify-content: flex-start;
@@ -214,7 +208,6 @@ footer {
 }
 
 th {
-  /* padding: 8px 15px; */
   background: #abdd93;
 }
 
@@ -222,6 +215,12 @@ thead tr {
   position: sticky;
   width: 100%;
   top: 0;
+}
+
+.names_container p {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
 }
 
 table {
@@ -306,7 +305,7 @@ textarea::placeholder {
   padding: 0.2rem;
   font-size: 1rem;
   border-radius: 7px;
-}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"AAAA,iCAAA;AACA;;;;;;;;;;EAUE,SAAA;EACA,UAAA;AACF;;AAEA,qDAAA;AACA;EACE,yBAAA;EACA,WAAA;EACA,8BAAA;AACF;;AAEA,mCAAA;AACA;EACE,gBAAA;EACA,aAAA;EACA,8BAAA;EACA,kBAAA;EACA,yCAAA;EACA,gBAAA;EACA,MAAA;AACF;;AAEA,+BAAA;AACA;EACE,eAAA;AACF;;AAEA,8BAAA;AACA;EACE,gBAAA;AACF;;AAEA;EACE,gBAAA;AACF;;AAEA;EACE,qBAAA;EACA,kBAAA;EACA,eAAA;AACF;;AAEA,4BAAA;AACA;EACE,iBAAA;EACA,sBAAA;EACA,kBAAA;AACF;;AAEA;EACE,sBAAA;AACF;;AAEA,mCAAA;AACA;EACE,gBAAA;EACA,aAAA;EACA,2DAAA;EACA,SAAA;AACF;;AAEA;EACE,aAAA;EACA,+CAAA;EACA,SAAA;EACA,uBAAA;EACA,gBAAA;AACF;;AAEA,0BAAA;AACA;EACE,sBAAA;EACA,kBAAA;EACA,wCAAA;EACA,YAAA;EAEA,qBAAA;EACA,mBAAA;AAAF;;AAGA;EACE,oBAAA;AAAF;;AAGA;EACE,gBAAA;EAEA,iBAAA;EACA,UAAA;EACA,WAAA;EACA,iBAAA;EACA,kBAAA;AADF;;AAIA;EACE,iBAAA;EACA,gBAAA;EACA,0BAAA;AADF;;AAIA;EACE,aAAA;EACA,8BAAA;EACA,QAAA;EACA,kBAAA;AADF;;AAIA;EACE,aAAA;EACA,mBAAA;AADF;;AAIA;EACE,gBAAA;AADF;;AAIA,qBAAA;AACA;EACE,YAAA;EACA,aAAA;EACA,uBAAA;EACA,mBAAA;EACA,oCAAA;EACA,aAAA;EACA,uBAAA;AADF;;AAIA;EACE,eAAA;EACA,MAAA;EACA,OAAA;EACA,SAAA;EACA,cAAA;EACA,8BAAA;EACA,kBAAA;EACA,mBAAA;EACA,UAAA;EACA,aAAA;EACA,mBAAA;EACA,kBAAA;AADF;;AAIA;EACE,aAAA;EACA,sBAAA;EACA,gBAAA;EACA,aAAA;AADF;;AAIA;EACE,mBAAA;EACA,aAAA;EACA,8BAAA;EACA,UAAA;AADF;;AAIA;EACE,iCAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cAAA;EACA,SAAA;AADF;;AAIA;EACE,mBAAA;AADF;;AAIA;EACE,aAAA;EACA,qCAAA;AADF;;AAIA;EACE,aAAA;EACA,2BAAA;EACA,cAAA;EACA,sBAAA;EACA,mBAAA;AADF;;AAIA;EACE,uBAAA;EACA,mBAAA;AADF;;AAIA;EACE,gBAAA;EACA,WAAA;EACA,MAAA;AADF;;AAIA;EACE,SAAA;EACA,UAAA;EACA,WAAA;AADF;;AAIA;EACE,mBAAA;AADF;;AAIA;EACE,gBAAA;AADF;;AAIA;EACE,gBAAA;EACA,sBAAA;EACA,aAAA;EACA,kBAAA;EACA,gBAAA;AADF;;AAIA;EACE,aAAA;EACA,sBAAA;AADF;;AAIA;EACE,SAAA;EACA,gCAAA;EACA,YAAA;EACA,kBAAA;EACA,aAAA;EACA,mBAAA;EACA,YAAA;AADF;;AAIA;EACE,gCAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cAAA;AADF;;AAIA;EACE,SAAA;EACA,yBAAA;EACA,aAAA;EACA,iBAAA;AADF;;AAIA;EACE,gCAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,cAAA;AADF;;AAIA;EACE,gCAAA;EACA,kBAAA;EACA,gBAAA;EACA,eAAA;EACA,iBAAA;EACA,mBAAA;EACA,WAAA;EACA,mBAAA;EACA,aAAA;EACA,YAAA;EACA,YAAA;AADF;;AAIA;EACE,cAAA;EACA,mBAAA;EACA,eAAA;EACA,eAAA;EACA,kBAAA;AADF","sourcesContent":["/* Reset default browser styles */\r\nbody,\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6,\r\np,\r\nul,\r\nli {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* Set background color and text color for the body */\r\nbody {\r\n  background-color: #f2f2f2;\r\n  color: #333;\r\n  font-family: Arial, sans-serif;\r\n}\r\n\r\n/* Add some spacing to the header */\r\nheader {\r\n  background: #fff;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 2rem 2rem;\r\n  box-shadow: 0 0 10px rgba(1, 22, 95, 0.1);\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/* Style the h1 in the header */\r\nheader h1 {\r\n  font-size: 24px;\r\n}\r\n\r\n/* Style the navigation menu */\r\nnav {\r\n  margin-top: 10px;\r\n}\r\n\r\nnav ul {\r\n  list-style: none;\r\n}\r\n\r\nnav ul li {\r\n  display: inline-block;\r\n  margin-right: 10px;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Style the genre buttons */\r\n.genre-btn {\r\n  padding: 5px 10px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 3px;\r\n}\r\n\r\n.genre-btn:hover {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* Style the main movie container */\r\n.movie-container {\r\n  margin-top: 20px;\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  gap: 20px;\r\n}\r\n\r\n.movie-list {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, 300px);\r\n  gap: 30px;\r\n  justify-content: center;\r\n  margin-top: 4rem;\r\n}\r\n\r\n/* Style the movie cards */\r\n.movie-card {\r\n  background-color: #fff;\r\n  border-radius: 4px;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  padding: 6px;\r\n\r\n  /* padding: 1rem 0; */\r\n  place-items: center;\r\n}\r\n\r\n.movie-card:not(.modal-open) {\r\n  pointer-events: auto;\r\n}\r\n\r\n.movie-card img {\r\n  /* width: 94%; */\r\n\r\n  /* height: 55%; */\r\n  width: 98%;\r\n  height: 80%;\r\n  object-fit: cover;\r\n  border-radius: 6px;\r\n}\r\n\r\n.movie-card h3 {\r\n  font-size: 1.2rem;\r\n  margin-top: 1rem;\r\n  text-transform: capitalize;\r\n}\r\n\r\n.movie-card .interactions {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  gap: 7px;\r\n  margin-top: 0.5rem;\r\n}\r\n\r\n.likes-container {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.likes-container span {\r\n  margin-left: 5px;\r\n}\r\n\r\n/* Style the footer */\r\nfooter {\r\n  height: 10vh;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  border-top: 2px solid rgb(5, 136, 9);\r\n  padding: 11px;\r\n  background-color: white;\r\n}\r\n\r\n.popup {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  bottom: 0;\r\n  overflow: auto;\r\n  background: rgba(0, 0, 0, 0.7);\r\n  padding-left: 16px;\r\n  padding-right: 16px;\r\n  z-index: 2;\r\n  display: flex;\r\n  align-items: center;\r\n  visibility: hidden;\r\n}\r\n\r\n.popup_content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  background: #fff;\r\n  padding: 24px;\r\n}\r\n\r\n.titleContent {\r\n  align-items: center;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 0;\r\n}\r\n\r\n.titleContent h2 {\r\n  font-family: 'Crete Round', serif;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 32px;\r\n  line-height: 138%;\r\n  color: #172b4d;\r\n  margin: 0;\r\n}\r\n\r\n.all_info h3 {\r\n  margin-bottom: 24px;\r\n}\r\n\r\n.desktopView {\r\n  display: grid;\r\n  grid-template-columns: repeat(2, 1fr);\r\n}\r\n\r\n.bottom_section {\r\n  display: flex;\r\n  justify-content: flex-start;\r\n  margin-top: 5%;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\nth {\r\n  /* padding: 8px 15px; */\r\n  background: #abdd93;\r\n}\r\n\r\nthead tr {\r\n  position: sticky;\r\n  width: 100%;\r\n  top: 0;\r\n}\r\n\r\ntable {\r\n  margin: 0;\r\n  padding: 0;\r\n  width: 100%;\r\n}\r\n\r\ntbody > tr:nth-child(odd) {\r\n  background: #e0e0e0;\r\n}\r\n\r\ntbody > tr:nth-child(even) {\r\n  background: #fff;\r\n}\r\n\r\n.showComments {\r\n  margin-top: 24px;\r\n  border: 2px solid #000;\r\n  height: 100px;\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n}\r\n\r\n.contact_form {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.contact_form input {\r\n  border: 0;\r\n  border-bottom: 1px solid #dbc8d7;\r\n  height: 48px;\r\n  padding-left: 16px;\r\n  margin-top: 0;\r\n  margin-bottom: 23px;\r\n  color: black;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: \"inter\", sans-serif;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 15px;\r\n  line-height: 160%;\r\n  color: #979493;\r\n}\r\n\r\n.contact_form textarea {\r\n  border: 0;\r\n  background-color: #fbf8f7;\r\n  padding: 12px;\r\n  margin-bottom: 5%;\r\n}\r\n\r\ntextarea::placeholder {\r\n  font-family: \"inter\", sans-serif;\r\n  font-style: italic;\r\n  font-weight: 400;\r\n  font-size: 15px;\r\n  line-height: 160%;\r\n  color: #3c3a39;\r\n}\r\n\r\n.contact_form button {\r\n  font-family: \"Inter\", sans-serif;\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  font-size: 17px;\r\n  line-height: 24px;\r\n  background: #ff6b00;\r\n  color: #fff;\r\n  border: 1px #ff6b00;\r\n  padding: 12px;\r\n  width: 131px;\r\n  height: 48px;\r\n}\r\n\r\n.counter {\r\n  color: #f44336;\r\n  background: #ffebee;\r\n  padding: 0.2rem;\r\n  font-size: 1rem;\r\n  border-radius: 7px;\r\n}\r\n"],"sourceRoot":""}]);
+}`, "",{"version":3,"sources":["webpack://./src/styles/style.css"],"names":[],"mappings":"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","sourcesContent":["/* Reset default browser styles */\r\nbody,\r\nh1,\r\nh2,\r\nh3,\r\nh4,\r\nh5,\r\nh6,\r\np,\r\nul,\r\nli {\r\n  margin: 0;\r\n  padding: 0;\r\n}\r\n\r\n/* Set background color and text color for the body */\r\nbody {\r\n  background-color: #f2f2f2;\r\n  color: #333;\r\n  font-family: Arial, sans-serif;\r\n}\r\n\r\n/* Add some spacing to the header */\r\nheader {\r\n  background: #fff;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 2rem 2rem;\r\n  box-shadow: 0 0 10px rgba(1, 22, 95, 0.1);\r\n  position: sticky;\r\n  top: 0;\r\n}\r\n\r\n/* Style the h1 in the header */\r\nheader h1 {\r\n  font-size: 24px;\r\n}\r\n\r\n/* Style the navigation menu */\r\nnav {\r\n  margin-top: 10px;\r\n}\r\n\r\nnav ul {\r\n  list-style: none;\r\n}\r\n\r\nnav ul li {\r\n  display: inline-block;\r\n  margin-right: 10px;\r\n  cursor: pointer;\r\n}\r\n\r\n/* Style the genre buttons */\r\n.genre-btn {\r\n  padding: 5px 10px;\r\n  border: 1px solid #ccc;\r\n  border-radius: 3px;\r\n}\r\n\r\n.genre-btn:hover {\r\n  background-color: #ccc;\r\n}\r\n\r\n/* Style the main movie container */\r\n.movie-container {\r\n  margin-top: 20px;\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\r\n  gap: 20px;\r\n}\r\n\r\n.movie-list {\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, 300px);\r\n  gap: 30px;\r\n  justify-content: center;\r\n  margin-top: 4rem;\r\n}\r\n\r\n/* Style the movie cards */\r\n.movie-card {\r\n  background-color: #fff;\r\n  border-radius: 4px;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  padding: 6px;\r\n\r\n  /* padding: 1rem 0; */\r\n  place-items: center;\r\n}\r\n\r\n.movie-card:not(.modal-open) {\r\n  pointer-events: auto;\r\n}\r\n\r\n.movie-card img {\r\n  width: 98%;\r\n  height: 80%;\r\n  object-fit: cover;\r\n  border-radius: 6px;\r\n}\r\n\r\n.movie-card h3 {\r\n  font-size: 1.2rem;\r\n  margin-top: 1rem;\r\n  text-transform: capitalize;\r\n}\r\n\r\n.movie-card .interactions {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  gap: 7px;\r\n  margin-top: 0.5rem;\r\n}\r\n\r\n.likes-container {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.likes-container span {\r\n  margin-left: 5px;\r\n}\r\n\r\n/* Style the footer */\r\nfooter {\r\n  height: 10vh;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  border-top: 2px solid rgb(5, 136, 9);\r\n  padding: 11px;\r\n  background-color: white;\r\n}\r\n\r\n.popup {\r\n  position: fixed;\r\n  top: 0;\r\n  left: 0;\r\n  bottom: 0;\r\n  overflow: auto;\r\n  background: rgba(0, 0, 0, 0.7);\r\n  padding-left: 16px;\r\n  padding-right: 16px;\r\n  z-index: 2;\r\n  display: flex;\r\n  align-items: center;\r\n  visibility: hidden;\r\n  height: 100%;\r\n}\r\n\r\n.popup_content {\r\n  display: flex;\r\n  flex-direction: column;\r\n  background: #fff;\r\n  padding: 24px;\r\n}\r\n\r\n.titleContent {\r\n  align-items: center;\r\n  display: flex;\r\n  justify-content: space-between;\r\n  padding: 0;\r\n}\r\n\r\n.titleContent h2 {\r\n  font-family: \"Crete Round\", serif;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 32px;\r\n  line-height: 138%;\r\n  color: #172b4d;\r\n  margin: 0;\r\n}\r\n\r\n.all_info h3 {\r\n  margin-bottom: 24px;\r\n}\r\n\r\n.bottom_section {\r\n  display: flex;\r\n  justify-content: flex-start;\r\n  margin-top: 5%;\r\n  flex-direction: column;\r\n  align-items: center;\r\n}\r\n\r\nth {\r\n  background: #abdd93;\r\n}\r\n\r\nthead tr {\r\n  position: sticky;\r\n  width: 100%;\r\n  top: 0;\r\n}\r\n\r\n.names_container p {\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  overflow-x: auto;\r\n}\r\n\r\ntable {\r\n  margin: 0;\r\n  padding: 0;\r\n  width: 100%;\r\n}\r\n\r\ntbody > tr:nth-child(odd) {\r\n  background: #e0e0e0;\r\n}\r\n\r\ntbody > tr:nth-child(even) {\r\n  background: #fff;\r\n}\r\n\r\n.showComments {\r\n  margin-top: 24px;\r\n  border: 2px solid #000;\r\n  height: 100px;\r\n  overflow-x: hidden;\r\n  overflow-y: auto;\r\n}\r\n\r\n.contact_form {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.contact_form input {\r\n  border: 0;\r\n  border-bottom: 1px solid #dbc8d7;\r\n  height: 48px;\r\n  padding-left: 16px;\r\n  margin-top: 0;\r\n  margin-bottom: 23px;\r\n  color: black;\r\n}\r\n\r\ninput::placeholder {\r\n  font-family: \"inter\", sans-serif;\r\n  font-style: normal;\r\n  font-weight: 400;\r\n  font-size: 15px;\r\n  line-height: 160%;\r\n  color: #979493;\r\n}\r\n\r\n.contact_form textarea {\r\n  border: 0;\r\n  background-color: #fbf8f7;\r\n  padding: 12px;\r\n  margin-bottom: 5%;\r\n}\r\n\r\ntextarea::placeholder {\r\n  font-family: \"inter\", sans-serif;\r\n  font-style: italic;\r\n  font-weight: 400;\r\n  font-size: 15px;\r\n  line-height: 160%;\r\n  color: #3c3a39;\r\n}\r\n\r\n.contact_form button {\r\n  font-family: \"Inter\", sans-serif;\r\n  font-style: normal;\r\n  font-weight: 700;\r\n  font-size: 17px;\r\n  line-height: 24px;\r\n  background: #ff6b00;\r\n  color: #fff;\r\n  border: 1px #ff6b00;\r\n  padding: 12px;\r\n  width: 131px;\r\n  height: 48px;\r\n}\r\n\r\n.counter {\r\n  color: #f44336;\r\n  background: #ffebee;\r\n  padding: 0.2rem;\r\n  font-size: 1rem;\r\n  border-radius: 7px;\r\n}\r\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -761,60 +760,21 @@ module.exports = styleTagTransform;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   addComment: () => (/* binding */ addComment),
+/* harmony export */   showCommentsVals: () => (/* binding */ showCommentsVals)
 /* harmony export */ });
-/* harmony import */ var _showComments__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./showComments */ "./src/modules/showComments.js");
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants.js */ "./src/modules/constants.js");
 
 
 let idVal = 0;
 
-const addComment = async (e) => {
-  e.preventDefault();
-
-  const valUser = document.querySelector('.userName');
-  const valScore = document.querySelector('.movieComment');
-
-  const commentId = e.target.getAttribute('data-id');
-  idVal = commentId;
-  const commentUser = valUser.value;
-  const commentValue = valScore.value;
-
-  const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-  const appID = 'fvEG8bcfusuKIAC9Au4g';
-
-  const endpoint = `/apps/${appID}/comments`;
-
-  try {
-    const response = await fetch(`${baseURL}${endpoint}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ item_id: commentId, username: commentUser, comment: commentValue }),
-    });
-
-    if (response.status === 201) {
-      valUser.value = '';
-      valScore.value = '';
-      console.log('Comment added successfully!');
-      showCommentsVals();
-    } else {
-      console.error('Failed to add comment.');
-    }
-  } catch (error) {
-    console.error('An error occurred:', error);
-  }
-};
-
 const showCommentsVals = async () => {
   try {
-    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
-    const appID = 'fvEG8bcfusuKIAC9Au4g';
     const itemID = idVal;
 
-    const endpoint = `/apps/${appID}/comments?item_id=${itemID}`;
+    const getData = `/apps/${_constants_js__WEBPACK_IMPORTED_MODULE_0__.appID}/comments?item_id=${itemID}`;
 
-    const response = await fetch(`${baseURL}${endpoint}`);
+    const response = await fetch(`${_constants_js__WEBPACK_IMPORTED_MODULE_0__.baseURL}${getData}`);
     const commentsData = await response.json();
 
     const commentContainer = document.querySelector('.showComments');
@@ -865,13 +825,46 @@ const showCommentsVals = async () => {
       paragraph2.innerHTML = `${comment.comment}`;
 
       commentContainer.appendChild(tableDesign);
-    });
+    }); return null;
   } catch (error) {
-    console.error('An error occurred:', error);
+    return error;
   }
 };
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (addComment);
+const addComment = async (e) => {
+  e.preventDefault();
+
+  const valUser = document.querySelector('.userName');
+  const valScore = document.querySelector('.movieComment');
+
+  const commentId = e.target.getAttribute('data-id');
+  idVal = commentId;
+
+  const commentUser = valUser.value;
+  const commentValue = valScore.value;
+
+  try {
+    const response = await fetch(`${_constants_js__WEBPACK_IMPORTED_MODULE_0__.baseURL}${_constants_js__WEBPACK_IMPORTED_MODULE_0__.endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ item_id: commentId, username: commentUser, comment: commentValue }),
+    });
+
+    if (response.status === 201) {
+      valUser.value = '';
+      valScore.value = '';
+      showCommentsVals();
+    } else {
+      const err = 'Failed to add comment.';
+      return err;
+    }
+    return null;
+  } catch (error) {
+    return error;
+  }
+};
 
 
 /***/ }),
@@ -884,35 +877,118 @@ const showCommentsVals = async () => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   fetchItems: () => (/* binding */ fetchItems)
 /* harmony export */ });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
+/* harmony import */ var _countingMovies_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./countingMovies.js */ "./src/modules/countingMovies.js");
 
 
-const countItems = (items) => {
-  const counter = document.querySelector('.counter');
-  if (items.length === 0) {
-    counter.textContent = '0';
-    return;
-  }
-  counter.textContent = items.length;
-};
 
 const fetchItems = async () => {
   try {
-    const response = await axios__WEBPACK_IMPORTED_MODULE_0__["default"].get('https://api.tvmaze.com/shows');
+    const response = await axios__WEBPACK_IMPORTED_MODULE_1__["default"].get('https://api.tvmaze.com/shows');
     const retrievedData = response.data;
-    countItems(retrievedData);
+    (0,_countingMovies_js__WEBPACK_IMPORTED_MODULE_0__.countItems)(retrievedData);
     return retrievedData;
   } catch (error) {
-    console.error('Error fetching data:', error);
-    countItems([]);
-    return [];
+    (0,_countingMovies_js__WEBPACK_IMPORTED_MODULE_0__.countItems)([]);
+    return error;
   }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (fetchItems);
 
+
+/***/ }),
+
+/***/ "./src/modules/addReservation.js":
+/*!***************************************!*\
+  !*** ./src/modules/addReservation.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _constants_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants.js */ "./src/modules/constants.js");
+
+
+let tempID;
+
+const renderReservations = async () => {
+  try {
+    const itemID = tempID;
+
+    const reserveData = `/apps/${_constants_js__WEBPACK_IMPORTED_MODULE_0__.appID}/reservations?item_id=${itemID}`;
+
+    const response = await fetch(`${_constants_js__WEBPACK_IMPORTED_MODULE_0__.baseURL}${reserveData}`);
+    const reservationInfo = await response.json();
+
+    const reservationsList = document.querySelector('.showComments');
+    const reservationCount = document.querySelector('.commentsCounter');
+    reservationsList.innerHTML = '<li>Loading reservations...</li>';
+    try {
+      reservationsList.innerHTML = '';
+      if (reservationInfo.length > 0) {
+        reservationInfo.forEach((reservation) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${reservation.username} - ${reservation.date_start} to ${reservation.date_end}`;
+          reservationsList.appendChild(listItem);
+        });
+        reservationCount.textContent = `(${reservationInfo.length})`;
+      } else {
+        reservationsList.innerHTML = '<li>No reservations found</li>';
+        reservationCount.textContent = '(0)';
+      }
+    } catch (error) {
+      reservationsList.innerHTML = '<li>Error loading reservations</li>';
+      reservationCount.textContent = '';
+    }
+    return null;
+  } catch (error) {
+    return null;
+  }
+};
+
+const reserved = async (e) => {
+  e.preventDefault();
+  const nameInput = document.querySelector('.userName');
+  const startDateInput = document.querySelector('.start-date');
+  const endDateInput = document.querySelector('.end-date');
+  const rId = e.target.getAttribute('data-id');
+  tempID = rId;
+  const name = nameInput.value.trim();
+  const startDate = startDateInput.value.trim();
+  const endDate = endDateInput.value.trim();
+  if (name !== '' && startDate !== '' && endDate !== '') {
+    try {
+      const response = await fetch(`${_constants_js__WEBPACK_IMPORTED_MODULE_0__.baseURL}${_constants_js__WEBPACK_IMPORTED_MODULE_0__.endpoint}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          item_id: rId,
+          username: name,
+          date_start: startDate,
+          date_end: endDate,
+        }),
+      });
+
+      if (response.status === 201) {
+        nameInput.value = '';
+        startDateInput.value = '';
+        endDateInput.value = '';
+        renderReservations();
+      }
+    } catch (error) {
+      return null;
+    }
+  }
+  return null;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reserved);
 
 /***/ }),
 
@@ -924,10 +1000,15 @@ const fetchItems = async () => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   retrieveData: () => (/* binding */ retrieveData)
+/* harmony export */   fetchItems: () => (/* binding */ fetchItems),
+/* harmony export */   retrieveData: () => (/* binding */ retrieveData),
+/* harmony export */   showMovies: () => (/* binding */ showMovies)
 /* harmony export */ });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/lib/axios.js");
 /* harmony import */ var _display_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./display.js */ "./src/modules/display.js");
+/* harmony import */ var _countingMovies_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./countingMovies.js */ "./src/modules/countingMovies.js");
+
+
 
 
 const baseAPI = 'https://api.tvmaze.com/shows';
@@ -950,16 +1031,46 @@ const showMovies = async () => {
     });
 
     (0,_display_js__WEBPACK_IMPORTED_MODULE_0__["default"])(moviesWithLikes);
-
-    return retrievedData;
+    return null;
   } catch (error) {
     return error;
   }
 };
 
-const retrieveData = showMovies;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showMovies);
+const fetchItems = async () => {
+  try {
+    const response = await axios__WEBPACK_IMPORTED_MODULE_2__["default"].get('https://api.tvmaze.com/shows');
+    const retrievedData = response.data;
+    (0,_countingMovies_js__WEBPACK_IMPORTED_MODULE_1__.countItems)(retrievedData);
+    return retrievedData;
+  } catch (error) {
+    (0,_countingMovies_js__WEBPACK_IMPORTED_MODULE_1__.countItems)([]);
+    return [];
+  }
+};
 
+const retrieveData = showMovies;
+
+
+/***/ }),
+
+/***/ "./src/modules/commentCounter.js":
+/*!***************************************!*\
+  !*** ./src/modules/commentCounter.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const totalComments = (info) => {
+  const counter = document.querySelector('.commentsCounter');
+  counter.innerHTML = info.length > 0 ? info.length : 0;
+  return info;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (totalComments);
 
 /***/ }),
 
@@ -971,46 +1082,13 @@ const retrieveData = showMovies;
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   comments: () => (/* binding */ comments),
-/* harmony export */   showPopup: () => (/* binding */ showPopup)
+/* harmony export */   "default": () => (/* binding */ comments)
 /* harmony export */ });
 /* harmony import */ var _assets_images_close_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/close.svg */ "./src/assets/images/close.svg");
 
 
 const baseAPI = 'https://api.tvmaze.com/shows';
 
-const showPopup = () => {
-  const pop = `<div class="popup">
-    <div class="popup_content">
-      <div class="titleContent">
-        <div class="heading">
-          <h2 id="headingSection"></h2>
-        </div>
-        <img id="closeButton" class="closeFunction" src="" alt="">
-      </div>
-      <div class="desktopView">
-        <div id="popup_info">
-          <img id="popup-img" src="" alt="Portfolio">
-        </div>
-        <div class ="all_info">
-          <h3>Summary</h3>
-          <p id="projectDesc"></p>
-          <div class="bottom_section">
-            <h3>Add A Comment</h3>
-            <form action="" method="post" id="form" class="contact_form">
-              <input name="FullName" type="text" placeholder="Full name" required maxlength="30" />
-              <textarea name="Message" rows="4" cols="50" placeholder="Your Insights...." maxlength="500" required></textarea>
-              <div class="centered_button" id="form-btn-container">
-                <button id="form_btn" type="submit">Comment</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>`;
-  return pop;
-};
 const closed = () => {
   const popWin = document.querySelector('.popup');
   popWin.style.visibility = 'hidden';
@@ -1026,12 +1104,27 @@ const comments = async (e) => {
     const paragraphSelect = document.getElementById('projectDesc');
     const popWin = document.querySelector('.popup');
     const response = await fetch(baseAPI);
+    const submitBtn = document.querySelector('.form_btn');
+    const headValue = document.getElementById('headerSect');
+    const tempCard1 = document.querySelector('.start-date');
+    const tempCard2 = document.querySelector('.end-date');
+    const tempCard3 = document.querySelector('.movieComment');
+    const tempHead = document.querySelector('.theHeading');
+    const tempBtn = document.querySelector('.reserve_btn');
     const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
+        headValue.innerHTML = 'Add A Comment';
+        tempHead.textContent = 'Comments';
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
+        submitBtn.setAttribute('data-id', show.id);
+        submitBtn.style.display = 'block';
         imageSelect.src = show.image.medium;
+        tempCard1.style.display = 'none';
+        tempCard2.style.display = 'none';
+        tempCard3.style.display = 'block';
+        tempBtn.style.display = 'none';
         popWin.style.visibility = 'visible';
       }
     });
@@ -1039,6 +1132,49 @@ const comments = async (e) => {
   }
 };
 
+
+
+
+/***/ }),
+
+/***/ "./src/modules/constants.js":
+/*!**********************************!*\
+  !*** ./src/modules/constants.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   appID: () => (/* binding */ appID),
+/* harmony export */   baseURL: () => (/* binding */ baseURL),
+/* harmony export */   endpoint: () => (/* binding */ endpoint)
+/* harmony export */ });
+const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+const appID = 'fvEG8bcfusuKIAC9Au4g';
+const endpoint = `/apps/${appID}/comments`;
+
+/***/ }),
+
+/***/ "./src/modules/countingMovies.js":
+/*!***************************************!*\
+  !*** ./src/modules/countingMovies.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   countItems: () => (/* binding */ countItems),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const countItems = (items) => {
+  const counter = document.querySelector('.counter');
+  if (items.length === 0) {
+    counter.textContent = '0';
+    return;
+  }
+  counter.textContent = items.length;
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (countItems);
 
 /***/ }),
 
@@ -1074,6 +1210,7 @@ const createTask = (info) => {
     const heading = document.createElement('h3');
     const secondaryDivision = document.createElement('div');
     const commentButton = document.createElement('button');
+    const reserveButton = document.createElement('button');
     const likeButton = document.createElement('button');
     const heartIcon = document.createElement('i');
     const likeCountContainer = document.createElement('div');
@@ -1084,6 +1221,10 @@ const createTask = (info) => {
     commentButton.classList.add('comments');
     commentButton.setAttribute('id', `${score.id}`);
     commentButton.innerHTML = 'Comments';
+
+    reserveButton.classList.add('reservations');
+    reserveButton.setAttribute('id', `${score.id}`);
+    reserveButton.innerHTML = 'Reservations';
 
     secondaryDivision.classList.add('interactions');
     heading.classList.add('movie-title');
@@ -1096,6 +1237,7 @@ const createTask = (info) => {
     mainDivision.appendChild(heading);
     mainDivision.appendChild(secondaryDivision);
     secondaryDivision.appendChild(commentButton);
+    secondaryDivision.appendChild(reserveButton);
 
     likeButton.classList.add('like-button');
     heartIcon.classList.add('fas', 'fa-heart');
@@ -1158,6 +1300,223 @@ const createTask = (info) => {
 
 /***/ }),
 
+/***/ "./src/modules/pop.js":
+/*!****************************!*\
+  !*** ./src/modules/pop.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_images_close_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/close.svg */ "./src/assets/images/close.svg");
+
+
+const popupWin = () => {
+    const closeButton = document.createElement('img');
+    closeButton.id = 'closeButton';
+    closeButton.classList.add('closeFunction');
+    closeButton.src = _assets_images_close_svg__WEBPACK_IMPORTED_MODULE_0__;
+
+    const popupImg = document.createElement('img');
+    popupImg.id = 'popup-img';
+    popupImg.alt = 'popup-img';
+
+    const headingSection = document.createElement('h2');
+    headingSection.id = 'headingSection';
+
+    const projectDesc = document.createElement('p');
+    projectDesc.id = 'projectDesc';
+
+    const commentHeading = document.createElement('h3');
+    const spanned = document.createElement('span');
+    span.classList.add('commentsCounter');
+    const commentTitle = document.createElement('h3');
+    commentTitle.classList.add('theHeading');
+    commentHeading.appendChild(commentTitle);
+    commentHeading.appendChild(spanned);
+
+    const reserveHeading = document.createElement('h3');
+    reserveHeading.setAttribute('id', 'headerSect');
+    reserveHeading.textContent = 'Reserve Now!';
+
+    const commentSection = document.createElement('div');
+    commentSection.classList.add('showComments');
+
+    const form = document.createElement('form');
+    form.action = '';
+    form.id = 'form';
+    form.classList.add('contact_form');
+
+    const fullNameInput = document.createElement('input');
+    fullNameInput.name = 'FullName';
+    fullNameInput.type = 'text';
+    fullNameInput.placeholder = 'User name';
+    fullNameInput.required = true;
+    fullNameInput.maxLength = 30;
+    fullNameInput.classList.add('userName');
+    form.appendChild(fullNameInput);
+
+    const messageTextarea = document.createElement('textarea');
+    messageTextarea.name = 'Message';
+    messageTextarea.rows = 4;
+    messageTextarea.cols = 50;
+    messageTextarea.placeholder = 'Your Insights....';
+    messageTextarea.required = true;
+    messageTextarea.maxLength = 500;
+    messageTextarea.classList.add('movieComment');
+    form.appendChild(messageTextarea);
+
+    const reservationStartDateInput = document.createElement('input');
+    reservationStartDateInput.type = 'text';
+    reservationStartDateInput.classList.add('start-date');
+    reservationStartDateInput.id = 'reservation-start-date';
+    reservationStartDateInput.placeholder = 'Start Date (YYYY-MM-DD)';
+    form.appendChild(reservationStartDateInput);
+
+    const reservationEndDateInput = document.createElement('input');
+    reservationEndDateInput.classList.add('end-date');
+    reservationEndDateInput.type = 'text';
+    reservationEndDateInput.id = 'reservation-end-date';
+    reservationEndDateInput.placeholder = 'End Date (YYYY-MM-DD)';
+    form.appendChild(reservationEndDateInput);
+
+    const formBtnContainer = document.createElement('div');
+    formBtnContainer.id = 'form-btn-container';
+    form.appendChild(formBtnContainer);
+
+    const formBtn = document.createElement('button');
+    formBtn.classList.add('form_btn');
+    formBtn.type = 'submit';
+    formBtn.textContent = 'Comment';
+    formBtnContainer.appendChild(formBtn);
+
+    const reserveBtn = document.createElement('button');
+    reserveBtn.classList.add('reserve_btn');
+    reserveBtn.type = 'submit';
+    reserveBtn.textContent = 'Reserve';
+    formBtnContainer.appendChild(reserveBtn);
+
+    const bottomSection = document.createElement('div');
+    bottomSection.classList.add('bottom_section');
+    bottomSection.appendChild(form);
+
+    const popup = document.createElement('div');
+    popup.classList.add('popup');
+
+    const popupContent = document.createElement('div');
+    popupContent.classList.add('popup_content');
+
+    popup.appendChild(popupContent);
+    popupContent.appendChild(closeButton);
+    popupContent.appendChild(popupImg);
+    popupContent.appendChild(headingSection);
+    popupContent.appendChild(projectDesc);
+    popupContent.appendChild(commentHeading);
+    popupContent.appendChild(reserveHeading);
+    popupContent.appendChild(commentSection);
+    popupContent.appendChild(bottomSection);
+
+    return popup;
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (popupWin);
+
+
+/***/ }),
+
+/***/ "./src/modules/reservationPopup.js":
+/*!*****************************************!*\
+  !*** ./src/modules/reservationPopup.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _assets_images_close_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../assets/images/close.svg */ "./src/assets/images/close.svg");
+
+
+const baseAPI = 'https://api.tvmaze.com/shows';
+
+const closePopup = () => {
+  const popup = document.querySelector('.popup');
+  popup.style.visibility = 'hidden';
+};
+
+const reservations = async (e) => {
+  const closeButton = document.getElementById('closeButton');
+  closeButton.src = _assets_images_close_svg__WEBPACK_IMPORTED_MODULE_0__;
+  if (e && e.target && e.target.classList.contains('reservations')) {
+    const buttonId = parseInt(e.target.id, 10);
+    const headingSection = document.getElementById('headingSection');
+    const popupImg = document.getElementById('popup-img');
+    const projectDesc = document.getElementById('projectDesc');
+    const headValue = document.getElementById('headerSect');
+    const reserveBtn = document.querySelector('.form_btn');
+    const popup = document.querySelector('.popup');
+    const tempCard1 = document.querySelector('.start-date');
+    const tempCard2 = document.querySelector('.end-date');
+    const tempCard3 = document.querySelector('.movieComment');
+    const tempBtn = document.querySelector('.reserve_btn');
+    const tempHead = document.querySelector('.theHeading');
+    const response = await fetch(baseAPI);
+    const retrievedData = await response.json();
+
+    retrievedData.forEach((show) => {
+      if (show.id === buttonId) {
+        headValue.innerHTML = 'Reserve Now!';
+        tempHead.textContent = 'Reservations';
+        headingSection.innerHTML = show.name;
+        projectDesc.innerHTML = show.summary;
+        popupImg.src = show.image.medium;
+        reserveBtn.style.display = 'none';
+        tempBtn.style.display = 'block';
+        tempBtn.setAttribute('data-id', show.id);
+        tempCard1.style.display = 'block';
+        tempCard2.style.display = 'block';
+        tempCard3.style.display = 'none';
+        popup.style.visibility = 'visible';
+      }
+    });
+
+    closeButton.addEventListener('click', closePopup);
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reservations);
+
+/***/ }),
+
+/***/ "./src/modules/reserveCounter.js":
+/*!***************************************!*\
+  !*** ./src/modules/reserveCounter.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+const reservedCounterVal = (data) => {
+  const reservationCount = document.querySelector('.commentsCounter');
+  if (data > 0) {
+    reservationCount.textContent = `(${data})`;
+  } else {
+    reservationCount.textContent = '(0)';
+  }
+
+  return data;
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (reservedCounterVal);
+
+
+/***/ }),
+
 /***/ "./src/modules/showComments.js":
 /*!*************************************!*\
   !*** ./src/modules/showComments.js ***!
@@ -1168,13 +1527,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const showComments = async (e) => {
+/* harmony import */ var _commentCounter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./commentCounter.js */ "./src/modules/commentCounter.js");
+
+
+const showComments = async (info) => {
   try {
-    const buttonId = e?.target?.id;
+    const buttonId = info;
 
     if (!buttonId) {
-      console.error('Invalid event or missing target ID.');
-      return;
+      const button = 'Invalid event or missing target ID.';
+      return button;
     }
 
     const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
@@ -1188,23 +1550,22 @@ const showComments = async (e) => {
 
     const commentContainer = document.querySelector('.showComments');
     commentContainer.innerHTML = '';
-    const counter = document.querySelector('.commentsCounter');
-    counter.innerHTML = commentsData.length > 0 ? commentsData.length : 0;
+    (0,_commentCounter_js__WEBPACK_IMPORTED_MODULE_0__["default"])(commentsData);
 
     const tableDesign = document.createElement('table');
     const tHead = document.createElement('thead');
     const tBody = document.createElement('tbody');
     tableDesign.append(tHead);
 
-    const trow = document.createElement('tr');
-    tHead.appendChild(trow);
+    const tableRow = document.createElement('tr');
+    tHead.appendChild(tableRow);
 
     const tData1 = document.createElement('th');
     const tData2 = document.createElement('th');
     const tData3 = document.createElement('th');
-    trow.appendChild(tData1);
-    trow.appendChild(tData2);
-    trow.appendChild(tData3);
+    tableRow.appendChild(tData1);
+    tableRow.appendChild(tData2);
+    tableRow.appendChild(tData3);
     tData1.innerHTML = 'Date';
     tData2.innerHTML = 'UserName';
     tData3.innerHTML = 'Comments';
@@ -1235,12 +1596,74 @@ const showComments = async (e) => {
 
       commentContainer.appendChild(tableDesign);
     });
+    return null;
   } catch (error) {
-    console.error('An error occurred:', error);
+    return error;
   }
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (showComments);
+
+
+/***/ }),
+
+/***/ "./src/modules/showreservations.js":
+/*!*****************************************!*\
+  !*** ./src/modules/showreservations.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _reserveCounter_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./reserveCounter.js */ "./src/modules/reserveCounter.js");
+
+
+const renderReservations = async (info) => {
+  try {
+    const buttonId = info;
+
+    if (!buttonId) {
+      const button = 'Invalid event or missing target ID.';
+      return button;
+    }
+    const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi';
+    const appID = 'fvEG8bcfusuKIAC9Au4g';
+    const itemID = buttonId;
+
+    const endpoint = `/apps/${appID}/reservations?item_id=${itemID}`;
+
+    const response = await fetch(`${baseURL}${endpoint}`);
+    const reservationInfo = await response.json();
+
+    const reservationsList = document.querySelector('.showComments');
+    const reservationCount = document.querySelector('.commentsCounter');
+    reservationsList.innerHTML = '<li>Loading reservations...</li>';
+    try {
+      reservationsList.innerHTML = '';
+      if (reservationInfo.length > 0) {
+        reservationInfo.forEach((reservation) => {
+          const listItem = document.createElement('li');
+          listItem.textContent = `${reservation.username} - ${reservation.date_start} to ${reservation.date_end}`;
+          reservationsList.appendChild(listItem);
+        });
+        (0,_reserveCounter_js__WEBPACK_IMPORTED_MODULE_0__["default"])(reservationInfo.length);
+      } else {
+        reservationsList.innerHTML = '<li>No reservations found</li>';
+      }
+      return null;
+    } catch (error) {
+      reservationsList.innerHTML = '<li>Error loading reservations</li>';
+      reservationCount.textContent = '';
+      return null;
+    }
+  } catch (error) {
+    return null;
+  }
+};
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (renderReservations);
 
 
 /***/ }),
@@ -5408,10 +5831,14 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/style.css */ "./src/styles/style.css");
 /* harmony import */ var _modules_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/api.js */ "./src/modules/api.js");
-/* harmony import */ var _modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/commentPopup.js */ "./src/modules/commentPopup.js");
-/* harmony import */ var _modules_addItemsCounter_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/addItemsCounter.js */ "./src/modules/addItemsCounter.js");
-/* harmony import */ var _modules_addComment_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/addComment.js */ "./src/modules/addComment.js");
-/* harmony import */ var _modules_showComments_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/showComments.js */ "./src/modules/showComments.js");
+/* harmony import */ var _modules_pop_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/pop.js */ "./src/modules/pop.js");
+/* harmony import */ var _modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/commentPopup.js */ "./src/modules/commentPopup.js");
+/* harmony import */ var _modules_reservationPopup_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/reservationPopup.js */ "./src/modules/reservationPopup.js");
+/* harmony import */ var _modules_addItemsCounter_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/addItemsCounter.js */ "./src/modules/addItemsCounter.js");
+/* harmony import */ var _modules_addComment_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/addComment.js */ "./src/modules/addComment.js");
+/* harmony import */ var _modules_showComments_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/showComments.js */ "./src/modules/showComments.js");
+/* harmony import */ var _modules_addReservation_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/addReservation.js */ "./src/modules/addReservation.js");
+/* harmony import */ var _modules_showreservations_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/showreservations.js */ "./src/modules/showreservations.js");
 
 
 
@@ -5419,24 +5846,35 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const shows = document.querySelector('.movie-container');
-// @ts-ignore
-shows.addEventListener('click', _modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_2__.comments);
 
-window.addEventListener('load', () => {
-  (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__["default"])();
-  // @ts-ignore
-  document.querySelector('.counter').innerHTML = (0,_modules_addItemsCounter_js__WEBPACK_IMPORTED_MODULE_3__["default"])();
-  // @ts-ignore
-  document.getElementById('popWindow').innerHTML = (0,_modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_2__.showPopup)();
+
+
+
+window.addEventListener('DOMContentLoaded', () => {
+  (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__.showMovies)();
+  (0,_modules_api_js__WEBPACK_IMPORTED_MODULE_1__.fetchItems)();
+  document.querySelector('.counter').innerHTML = (0,_modules_addItemsCounter_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
+
+  const popData = document.getElementById('popWindow');
+  popData.appendChild((0,_modules_pop_js__WEBPACK_IMPORTED_MODULE_2__["default"])());
+  document.addEventListener('click', _modules_reservationPopup_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
+  document.addEventListener('click', _modules_commentPopup_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
   const form = document.querySelector('.form_btn');
-  form.addEventListener('click', _modules_addComment_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  const commentMovie = document.querySelector('.movie-container');
-  commentMovie.addEventListener('click', _modules_showComments_js__WEBPACK_IMPORTED_MODULE_5__["default"]);
+  form.addEventListener('click', _modules_addComment_js__WEBPACK_IMPORTED_MODULE_6__.addComment);
+  const reserveButton = document.querySelector('.reserve_btn');
+  reserveButton.addEventListener('click', _modules_addReservation_js__WEBPACK_IMPORTED_MODULE_8__["default"]);
+  document.addEventListener('click', (event) => {
+    const targetId = event.target.id;
+    if (event.target.classList.contains('reservations')) {
+      (0,_modules_showreservations_js__WEBPACK_IMPORTED_MODULE_9__["default"])(targetId);
+    } else if (event.target.classList.contains('comments')) {
+      (0,_modules_showComments_js__WEBPACK_IMPORTED_MODULE_7__["default"])(targetId);
+    }
+  });
 });
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=bundled717578f17d5624a3b36.js.map
+//# sourceMappingURL=bundle9e4f87cf47c956b98e23.js.map

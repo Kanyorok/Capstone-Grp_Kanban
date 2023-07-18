@@ -22,13 +22,11 @@ const comments = async (e) => {
     const tempCard1 = document.querySelector('.start-date');
     const tempCard2 = document.querySelector('.end-date');
     const tempCard3 = document.querySelector('.movieComment');
-    const tempHead = document.querySelector('.theHeading');
     const tempBtn = document.querySelector('.reserve_btn');
     const retrievedData = await response.json();
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
         headValue.innerHTML = 'Add A Comment';
-        tempHead.textContent = 'Comments';
         titleSelect.innerHTML = show.name;
         paragraphSelect.innerHTML = show.summary;
         submitBtn.setAttribute('data-id', show.id);

@@ -1,9 +1,9 @@
 const reservedCounterVal = (data) => {
   const reservationCount = document.querySelector('.commentsCounter');
   if (data > 0) {
-    reservationCount.textContent = `(${data})`;
+    reservationCount.textContent = `Reservations (${data})`;
   } else {
-    reservationCount.textContent = '(0)';
+    reservationCount.textContent = 'Reservations (0)';
   }
 
   return data;

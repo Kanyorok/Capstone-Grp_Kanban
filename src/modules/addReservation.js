@@ -1,4 +1,5 @@
-import { baseURL, appID, endpoint } from './constants.js';
+import { baseURL, appID, endpointReserve } from './constants.js';
+import totalComments from './commentCounter.js';
 
 let tempID;
 
@@ -10,9 +11,11 @@ const renderReservations = async () => {
 
     const response = await fetch(`${baseURL}${reserveData}`);
     const reservationInfo = await response.json();
+    totalComments(reservationInfo);
 
     const reservationsList = document.querySelector('.showComments');
     const reservationCount = document.querySelector('.commentsCounter');
+
     reservationsList.innerHTML = '<li>Loading reservations...</li>';
     try {
       reservationsList.innerHTML = '';
@@ -22,15 +25,14 @@ const renderReservations = async () => {
           listItem.textContent = `${reservation.username} - ${reservation.date_start} to ${reservation.date_end}`;
           reservationsList.appendChild(listItem);
         });
-        reservationCount.textContent = `(${reservationInfo.length})`;
       } else {
         reservationsList.innerHTML = '<li>No reservations found</li>';
-        reservationCount.textContent = '(0)';
       }
     } catch (error) {
       reservationsList.innerHTML = '<li>Error loading reservations</li>';
       reservationCount.textContent = '';
     }
+
     return null;
   } catch (error) {
     return null;
@@ -49,7 +51,7 @@ const reserved = async (e) => {
   const endDate = endDateInput.value.trim();
   if (name !== '' && startDate !== '' && endDate !== '') {
     try {
-      const response = await fetch(`${baseURL}${endpoint}`, {
+      const response = await fetch(`${baseURL}${endpointReserve}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

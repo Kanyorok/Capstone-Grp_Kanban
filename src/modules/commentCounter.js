@@ -1,6 +1,10 @@
 const totalComments = (info) => {
   const counter = document.querySelector('.commentsCounter');
-  counter.innerHTML = info.length > 0 ? info.length : 0;
+  if (info.length > 0) {
+    counter.textContent = `Comments (${info.length})`;
+  } else {
+    counter.textContent = 'Comments (0)';
+  }
   return info;
 };
 

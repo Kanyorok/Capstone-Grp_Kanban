@@ -11,6 +11,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  font-size: small;
 }
 
 /* Set background color and text color for the body */
@@ -149,6 +150,16 @@ footer {
   height: 100%;
 }
 
+#popup-img {
+  max-width: 10%;
+  max-height: 10%;
+}
+
+.closeFunction {
+  max-width: 1%;
+  max-height: 1%;
+}
+
 .popup_content {
   display: flex;
   flex-direction: column;
@@ -159,7 +170,7 @@ footer {
 .titleContent {
   align-items: center;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 0;
 }
 
@@ -180,7 +191,6 @@ footer {
 .bottom_section {
   display: flex;
   justify-content: flex-start;
-  margin-top: 5%;
   flex-direction: column;
   align-items: center;
 }
@@ -216,7 +226,6 @@ tbody > tr:nth-child(even) {
 }
 
 .showComments {
-  margin-top: 24px;
   border: 2px solid #000;
   height: 100px;
   overflow-x: hidden;
@@ -231,10 +240,9 @@ tbody > tr:nth-child(even) {
 .contact_form input {
   border: 0;
   border-bottom: 1px solid #dbc8d7;
-  height: 48px;
+  height: 20px;
   padding-left: 16px;
-  margin-top: 0;
-  margin-bottom: 23px;
+  margin-top: 10px;
   color: black;
 }
 

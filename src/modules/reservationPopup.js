@@ -22,14 +22,12 @@ const reservations = async (e) => {
     const tempCard2 = document.querySelector('.end-date');
     const tempCard3 = document.querySelector('.movieComment');
     const tempBtn = document.querySelector('.reserve_btn');
-    const tempHead = document.querySelector('.theHeading');
     const response = await fetch(baseAPI);
     const retrievedData = await response.json();
 
     retrievedData.forEach((show) => {
       if (show.id === buttonId) {
         headValue.innerHTML = 'Reserve Now!';
-        tempHead.textContent = 'Reservations';
         headingSection.innerHTML = show.name;
         projectDesc.innerHTML = show.summary;
         popupImg.src = show.image.medium;

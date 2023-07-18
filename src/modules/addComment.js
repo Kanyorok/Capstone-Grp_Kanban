@@ -1,4 +1,5 @@
 import { baseURL, appID, endpoint } from './constants.js';
+import totalComments from './commentCounter.js';
 
 let idVal = 0;
 
@@ -13,8 +14,7 @@ export const showCommentsVals = async () => {
 
     const commentContainer = document.querySelector('.showComments');
     commentContainer.innerHTML = '';
-    const counter = document.querySelector('.commentsCounter');
-    counter.innerHTML = commentsData.length > 0 ? commentsData.length : 0;
+    totalComments(commentsData);
 
     const tableDesign = document.createElement('table');
     const tHead = document.createElement('thead');

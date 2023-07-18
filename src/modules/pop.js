@@ -1,71 +1,36 @@
 import closeSvg from '../assets/images/close.svg';
 
 const popupWin = () => {
-  const popup = document.createElement('div');
-  popup.classList.add('popup');
-
-  const popupContent = document.createElement('div');
-  popupContent.classList.add('popup_content');
-
   const titleContent = document.createElement('div');
   titleContent.classList.add('titleContent');
-
-  const heading = document.createElement('div');
-  heading.classList.add('heading');
-
-  const headingSection = document.createElement('h2');
-  headingSection.id = 'headingSection';
-  heading.appendChild(headingSection);
-
   const closeButton = document.createElement('img');
   closeButton.id = 'closeButton';
   closeButton.classList.add('closeFunction');
   closeButton.src = closeSvg;
-  titleContent.appendChild(heading);
-  titleContent.appendChild(closeButton);
-
-  const desktopView = document.createElement('div');
-  desktopView.classList.add('desktopView');
-
-  const popupInfo = document.createElement('div');
-  popupInfo.id = 'popup_info';
-
-  const commentHeading = document.createElement('h3');
-  const commentSection = document.createElement('div');
-  commentSection.classList.add('showComments');
-
-  const span = document.createElement('span');
-  span.classList.add('commentsCounter');
-  const commentTitle = document.createElement('h3');
-  commentTitle.classList.add('theHeading');
-  commentHeading.appendChild(commentTitle);
-  commentHeading.appendChild(span);
 
   const popupImg = document.createElement('img');
   popupImg.id = 'popup-img';
   popupImg.alt = 'popup-img';
-  popupInfo.appendChild(popupImg);
-  popupInfo.appendChild(commentHeading);
-  popupInfo.appendChild(commentSection);
+  titleContent.appendChild(popupImg);
+  titleContent.appendChild(closeButton);
 
-  const allInfo = document.createElement('div');
-  allInfo.classList.add('all_info');
-
-  const summaryHeading = document.createElement('h3');
-  summaryHeading.textContent = 'Summary';
-  allInfo.appendChild(summaryHeading);
+  const headingSection = document.createElement('h2');
+  headingSection.id = 'headingSection';
 
   const projectDesc = document.createElement('p');
   projectDesc.id = 'projectDesc';
-  allInfo.appendChild(projectDesc);
 
-  const bottomSection = document.createElement('div');
-  bottomSection.classList.add('bottom_section');
+  const commentHeading = document.createElement('h3');
+  const spanned = document.createElement('span');
+  spanned.classList.add('commentsCounter');
+  commentHeading.appendChild(spanned);
 
   const reserveHeading = document.createElement('h3');
   reserveHeading.setAttribute('id', 'headerSect');
   reserveHeading.textContent = 'Reserve Now!';
-  bottomSection.appendChild(reserveHeading);
+
+  const commentSection = document.createElement('div');
+  commentSection.classList.add('showComments');
 
   const form = document.createElement('form');
   form.action = '';
@@ -121,14 +86,24 @@ const popupWin = () => {
   reserveBtn.textContent = 'Reserve';
   formBtnContainer.appendChild(reserveBtn);
 
+  const bottomSection = document.createElement('div');
+  bottomSection.classList.add('bottom_section');
   bottomSection.appendChild(form);
 
-  allInfo.appendChild(bottomSection);
-  desktopView.appendChild(popupInfo);
-  desktopView.appendChild(allInfo);
-  popupContent.appendChild(titleContent);
-  popupContent.appendChild(desktopView);
+  const popup = document.createElement('div');
+  popup.classList.add('popup');
+
+  const popupContent = document.createElement('div');
+  popupContent.classList.add('popup_content');
+
   popup.appendChild(popupContent);
+  popupContent.appendChild(titleContent);
+  popupContent.appendChild(headingSection);
+  popupContent.appendChild(projectDesc);
+  popupContent.appendChild(commentHeading);
+  popupContent.appendChild(reserveHeading);
+  popupContent.appendChild(commentSection);
+  popupContent.appendChild(bottomSection);
 
   return popup;
 };
