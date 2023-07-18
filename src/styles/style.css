@@ -153,8 +153,9 @@ footer {
 }
 
 #popup-img {
-  max-width: 20%;
-  max-height: 15%;
+  max-width: 30%;
+  max-height: 20%;
+  border-radius: 10px;
 }
 
 .closeSection {
@@ -173,7 +174,6 @@ footer {
   flex-direction: column;
   background: #fff;
   padding: 24px;
-  /* margin: 30px auto; */
   height: fit-content;
   width: 60vw;
   border-radius: 10px;
@@ -182,7 +182,7 @@ footer {
 .titleContent {
   display: flex;
   justify-content: space-between;
-  padding-left: 44%;
+  padding-left: 40%;
 }
 
 .titleContent h2 {
@@ -323,6 +323,7 @@ textarea::placeholder {
   width: 78px;
   height: 30px;
   border-radius: 10px;
+  margin-top: 2em;
 }
 
 .counter {
