@@ -174,7 +174,7 @@ footer {
   flex-direction: column;
   background: #fff;
   padding: 24px;
-  height: fit-content;
+  height: auto;
   width: 60vw;
   border-radius: 10px;
 }
