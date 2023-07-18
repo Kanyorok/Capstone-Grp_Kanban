@@ -3,6 +3,9 @@ import closeSvg from '../assets/images/close.svg';
 const popupWin = () => {
   const titleContent = document.createElement('div');
   titleContent.classList.add('titleContent');
+  const titleClose = document.createElement('div');
+  titleClose.classList.add('closeSection');
+
   const closeButton = document.createElement('img');
   closeButton.id = 'closeButton';
   closeButton.classList.add('closeFunction');
@@ -12,25 +15,36 @@ const popupWin = () => {
   popupImg.id = 'popup-img';
   popupImg.alt = 'popup-img';
   titleContent.appendChild(popupImg);
-  titleContent.appendChild(closeButton);
+  titleClose.appendChild(closeButton);
+  titleContent.appendChild(titleClose);
 
+  const movieDetails = document.createElement('div');
+  movieDetails.classList.add('movieDetails');
   const headingSection = document.createElement('h2');
   headingSection.id = 'headingSection';
 
   const projectDesc = document.createElement('p');
   projectDesc.id = 'projectDesc';
+  movieDetails.appendChild(headingSection);
+  movieDetails.appendChild(projectDesc);
 
+  const counters = document.createElement('div');
+  counters.classList.add('counters');
   const commentHeading = document.createElement('h3');
   const spanned = document.createElement('span');
   spanned.classList.add('commentsCounter');
   commentHeading.appendChild(spanned);
 
+  const counterDivision = document.createElement('div');
+  counterDivision.classList.add('flexibleDiv');
   const reserveHeading = document.createElement('h3');
   reserveHeading.setAttribute('id', 'headerSect');
   reserveHeading.textContent = 'Reserve Now!';
 
   const commentSection = document.createElement('div');
   commentSection.classList.add('showComments');
+  counters.appendChild(commentHeading);
+  counters.appendChild(commentSection);
 
   const form = document.createElement('form');
   form.action = '';
@@ -89,6 +103,8 @@ const popupWin = () => {
   const bottomSection = document.createElement('div');
   bottomSection.classList.add('bottom_section');
   bottomSection.appendChild(form);
+  counterDivision.appendChild(reserveHeading);
+  counterDivision.appendChild(bottomSection);
 
   const popup = document.createElement('div');
   popup.classList.add('popup');
@@ -98,12 +114,9 @@ const popupWin = () => {
 
   popup.appendChild(popupContent);
   popupContent.appendChild(titleContent);
-  popupContent.appendChild(headingSection);
-  popupContent.appendChild(projectDesc);
-  popupContent.appendChild(commentHeading);
-  popupContent.appendChild(reserveHeading);
-  popupContent.appendChild(commentSection);
-  popupContent.appendChild(bottomSection);
+  popupContent.appendChild(movieDetails);
+  popupContent.appendChild(counters);
+  popupContent.appendChild(counterDivision);
 
   return popup;
 };
