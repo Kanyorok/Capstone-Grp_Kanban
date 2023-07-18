@@ -146,18 +146,22 @@ footer {
   z-index: 2;
   display: flex;
   align-items: center;
+  justify-content: center;
   visibility: hidden;
   height: 100%;
+  width: 100%;
 }
 
 #popup-img {
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 20%;
+  max-height: 20%;
+  border-radius: 10px;
 }
 
 .closeFunction {
-  max-width: 1%;
-  max-height: 1%;
+  max-width: 2%;
+  max-height: 2%;
+  align-self: flex-start;
 }
 
 .popup_content {
@@ -165,23 +169,27 @@ footer {
   flex-direction: column;
   background: #fff;
   padding: 24px;
+  /* margin: 30px auto; */
+  height: fit-content;
+  width: 60vw;
+  border-radius: 10px;
 }
 
 .titleContent {
   align-items: center;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0;
+  margin-bottom: 20px;
 }
 
 .titleContent h2 {
   font-family: "Crete Round", serif;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 32px;
   line-height: 138%;
   color: #172b4d;
-  margin: 0;
 }
 
 .all_info h3 {
@@ -197,6 +205,14 @@ footer {
 
 th {
   background: #abdd93;
+}
+
+.showComments p {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 12px;
 }
 
 thead tr {
@@ -230,6 +246,7 @@ tbody > tr:nth-child(even) {
   height: 100px;
   overflow-x: hidden;
   overflow-y: auto;
+  border-radius: 10px;
 }
 
 .contact_form {
@@ -283,6 +300,7 @@ textarea::placeholder {
   padding: 12px;
   width: 131px;
   height: 48px;
+  border-radius: 10px;
 }
 
 .counter {
