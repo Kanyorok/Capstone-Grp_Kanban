@@ -151,13 +151,19 @@ footer {
 }
 
 #popup-img {
-  max-width: 10%;
-  max-height: 10%;
+  max-width: 20%;
+  max-height: 15%;
 }
 
-.closeFunction {
-  max-width: 1%;
-  max-height: 1%;
+.closeSection {
+  float: right;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .popup_content {
@@ -168,10 +174,9 @@ footer {
 }
 
 .titleContent {
-  align-items: center;
   display: flex;
-  justify-content: flex-start;
-  padding: 0;
+  justify-content: space-between;
+  padding-left: 44%;
 }
 
 .titleContent h2 {
@@ -225,16 +230,29 @@ tbody > tr:nth-child(even) {
   background: #fff;
 }
 
+td {
+  max-width: 20px;
+  word-wrap: break-word;
+}
+
+.counters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .showComments {
   border: 2px solid #000;
   height: 100px;
-  overflow-x: hidden;
   overflow-y: auto;
+  width: 400px;
 }
 
 .contact_form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .contact_form input {
@@ -258,8 +276,8 @@ input::placeholder {
 .contact_form textarea {
   border: 0;
   background-color: #fbf8f7;
-  padding: 12px;
-  margin-bottom: 5%;
+  padding: 5px;
+  margin-bottom: 2%;
 }
 
 textarea::placeholder {
@@ -271,18 +289,25 @@ textarea::placeholder {
   color: #3c3a39;
 }
 
+.flexibleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
 .contact_form button {
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
   background: #ff6b00;
   color: #fff;
-  border: 1px #ff6b00;
-  padding: 12px;
-  width: 131px;
-  height: 48px;
+  border: 0.5px #ff6b00;
+  padding: 5px;
+  width: 78px;
+  height: 30px;
 }
 
 .counter {
