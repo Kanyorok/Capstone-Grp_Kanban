@@ -1,0 +1,335 @@
+/* Reset default browser styles */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  font-size: small;
+}
+
+/* Set background color and text color for the body */
+body {
+  background-color: #f2f2f2;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Add some spacing to the header */
+header {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 10px rgba(1, 22, 95, 0.1);
+  position: sticky;
+  top: 0;
+}
+
+/* Style the h1 in the header */
+header h1 {
+  font-size: 24px;
+}
+
+/* Style the navigation menu */
+nav {
+  margin-top: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Style the genre buttons */
+.genre-btn {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.genre-btn:hover {
+  background-color: #ccc;
+}
+
+/* Style the main movie container */
+.movie-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 30px;
+  justify-content: center;
+  margin-top: 4rem;
+}
+
+/* Style the movie cards */
+.movie-card {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 6px;
+
+  /* padding: 1rem 0; */
+  place-items: center;
+}
+
+.movie-card:not(.modal-open) {
+  pointer-events: auto;
+}
+
+.movie-card img {
+  width: 98%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.movie-card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.movie-card .interactions {
+  display: flex;
+  justify-content: space-between;
+  gap: 7px;
+  margin-top: 0.5rem;
+}
+
+.likes-container {
+  display: flex;
+  align-items: center;
+}
+
+.likes-container span {
+  margin-left: 5px;
+}
+
+/* Style the footer */
+footer {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid rgb(5, 136, 9);
+  padding: 11px;
+  background-color: white;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
+  padding-left: 16px;
+  padding-right: 16px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+#popup-img {
+  max-width: 30%;
+  max-height: 20%;
+  border-radius: 10px;
+}
+
+.closeSection {
+  float: right;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.popup_content {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 24px;
+  height: auto;
+  width: 60vw;
+  border-radius: 10px;
+}
+
+.titleContent {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40%;
+}
+
+.titleContent h2 {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 138%;
+  color: #172b4d;
+}
+
+.all_info h3 {
+  margin-bottom: 24px;
+}
+
+.bottom_section {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+th {
+  background: #abdd93;
+}
+
+.showComments p {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 12px;
+}
+
+thead tr {
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
+.names_container p {
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+tbody > tr:nth-child(odd) {
+  background: #e0e0e0;
+}
+
+tbody > tr:nth-child(even) {
+  background: #fff;
+}
+
+td {
+  max-width: 20px;
+  word-wrap: break-word;
+}
+
+.counters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.showComments {
+  border: 2px solid #000;
+  height: 100px;
+  overflow-y: auto;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact_form input {
+  border: 0;
+  border-bottom: 1px solid #dbc8d7;
+  height: 20px;
+  padding-left: 16px;
+  margin-top: 10px;
+  color: black;
+}
+
+input::placeholder {
+  font-family: "inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #979493;
+}
+
+.contact_form textarea {
+  border: 0;
+  background-color: #fbf8f7;
+  padding: 5px;
+  margin-bottom: 2%;
+}
+
+textarea::placeholder {
+  font-family: "inter", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: #3c3a39;
+}
+
+.flexibleDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.contact_form button {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 12px;
+  background: #ff6b00;
+  color: #fff;
+  border: 0.5px #ff6b00;
+  padding: 5px;
+  width: 78px;
+  height: 30px;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+.counter {
+  color: #f44336;
+  background: #ffebee;
+  padding: 0.2rem;
+  font-size: 1rem;
+  border-radius: 7px;
+}
